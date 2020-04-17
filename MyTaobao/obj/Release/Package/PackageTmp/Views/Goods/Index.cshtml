@@ -1,0 +1,174 @@
+﻿
+@{
+    ViewBag.Title = "采购商品信息记录表";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--头标题-->
+<div class="right_content_title">
+    <h5>@ViewBag.Title </h5>
+</div>
+
+<!--内容面板-->
+<div class="right_content_wrapper">
+    <div id="app">
+        <template>
+            <el-form ref="form" :model="form" inline size="mini">
+                <el-row type="flex">
+                    <el-form-item label="产品类型" label-width="110px">
+                        <el-input v-model="form.type" style="width:200px;" clearable></el-input>
+                    </el-form-item>
+
+                    <el-form-item label="产品名称" label-width="110px">
+                        <el-input v-model="form.goodsName" style="width:200px;" clearable></el-input>
+                    </el-form-item>
+
+                    <el-form-item label="进货价格范围" label-width="110px">
+                        <el-input v-model="form.minPrice" style="width:80px;" clearable></el-input>
+                        -
+                        <el-input v-model="form.maxPrice" style="width:80px;" clearable></el-input>
+                    </el-form-item>
+
+                    <el-form-item label="售价范围" label-width="110px">
+                        <el-input v-model="form.sell_min_price" style="width:80px;" clearable></el-input>
+                        -
+                        <el-input v-model="form.sell_max_price" style="width:80px;" clearable></el-input>
+                    </el-form-item>
+
+                    <el-form-item>
+                        <el-button type="primary" @@click="onSubmit" icon="el-icon-search">查询</el-button>
+                    </el-form-item>
+                </el-row>
+            </el-form>
+
+            <div class="sep_line"></div>
+
+            <div class="block" style="width:80%;margin:5px;">
+                @*<el-button type="success" size="mini" @@click="exportFile" icon="el-icon-download">导出数据</el-button>*@
+
+                <el-button type="success" size="mini" @@click="showAddGoods()" icon="el-icon-download">新增</el-button>
+            </div>
+
+            <el-table :data="tableData" style="98%" size="small" height="500"
+                      v-loading="loading"
+                      border
+                      element-loading-text="拼命加载中"
+                      element-loading-spinner="el-icon-loading"
+                      element-loading-background="rgba(0, 0, 0, 0.8)">
+                <el-table-column prop="id" label="产品编号" width="80" align="center"></el-table-column>
+                <el-table-column prop="topType" label="产品大类" width="100" align="center"></el-table-column>
+                <el-table-column prop="type" label="产品种类" width="110" align="center"></el-table-column>
+                <el-table-column prop="goodsName" label="产品名称" width="280" align="center"></el-table-column>
+                <el-table-column label="批发价格区间" width="180" align="center">
+                    <template slot-scope="scope">
+                        {{scope.row.minPrice==""?"-":scope.row.minPrice}}
+                        -
+                        {{scope.row.maxPrice==""?"-":scope.row.maxPrice}}
+                    </template>
+                </el-table-column>
+
+                <el-table-column label="出售价格区间" width="180" align="center">
+                    <template slot-scope="scope">
+                        {{scope.row.sell_min_price==""?"-":scope.row.sell_min_price}}
+                        -
+                        {{scope.row.sell_max_price==""?"-":scope.row.sell_max_price}}
+                    </template>
+                </el-table-column>
+
+                <el-table-column prop="describe" label="产品描述" width="300" align="center"></el-table-column>
+
+                <el-table-column label="操作" width="300" align="center">
+                    <template slot-scope="scope">
+                        <el-button size="mini" type="text" @@click="JumpUrl(scope.row.url)">跳转购买地址</el-button>
+                        <el-button size="mini" type="text" @@click="Copy(scope.row.url)">复制链接</el-button>
+
+
+
+                        <el-button size="mini" type="text" @@click="showUpdateGoods(scope.row)">修改</el-button>
+
+                        <el-button size="mini" type="text" @@click="Delete(scope.row.id)">删除</el-button>
+                    </template>
+                </el-table-column>
+            </el-table>
+            <div class="block" style="width:80%;">
+                <el-pagination @@size-change="handleSizeChange"
+                               @@current-change="handleCurrentChange"
+                               :current-page="currentPage"
+                               :page-sizes="pageSizes"
+                               :page-size="pageSize"
+                               layout="total, sizes, prev, pager, next, jumper"
+                               :total="total">
+                </el-pagination>
+            </div>
+        <!--弹出框-->
+            <el-dialog :title="addGoodsForm.title" :visible.sync="dialogFormVisible" v-loading="formLoading" width="40%">
+                <el-form :model="addGoodsForm" size="mini">
+
+                    <el-form-item label="" style="display: none;">
+                        <el-input v-model="addGoodsForm.id" clearable></el-input>
+                    </el-form-item>
+
+                    <el-form-item label="产品大类" label-width="110px">
+                        <span class="xin">*</span>
+                        <el-input v-model="addGoodsForm.topType" style="width:200px;" clearable></el-input>
+                    </el-form-item>
+                    <el-form-item label="产品种类" label-width="110px">
+                        <span class="xin">*</span>
+                        <el-input v-model="addGoodsForm.type" style="width:200px;" clearable></el-input>
+
+                    </el-form-item>
+
+
+                    <el-form-item label="产品名称" label-width="110px">
+                        <span class="xin">*</span>
+                        <el-input v-model="addGoodsForm.goodsName" style="width:200px;" clearable></el-input>
+                    </el-form-item>
+
+                    <el-form-item label="产品描述" label-width="110px">
+                        <el-input v-model="addGoodsForm.describe" style="width:200px;" clearable></el-input>
+                    </el-form-item>
+
+                    <el-form-item label="进货价格范围" label-width="110px">
+                        <el-input v-model="addGoodsForm.minPrice" style="width:80px;" clearable></el-input>
+                        -
+                        <el-input v-model="addGoodsForm.maxPrice" style="width:80px;" clearable></el-input>
+                    </el-form-item>
+                    <el-form-item label="售价范围" label-width="110px">
+                        <el-input v-model="addGoodsForm.sell_min_price" style="width:80px;" clearable></el-input>
+                        -
+                        <el-input v-model="addGoodsForm.sell_max_price" style="width:80px;" clearable></el-input>
+                    </el-form-item>
+
+                    <el-form-item label="产品链接" label-width="110px">
+                        <span class="xin">*</span>
+                        <el-input v-model="addGoodsForm.url" style="width:300px;height:80px;" clearable></el-input>
+                    </el-form-item>
+                </el-form>
+                <div slot="footer" class="dialog-footer">
+                    <el-button @@click="dialogFormVisible = false">取 消</el-button>
+                    <el-button @@click="clearAddGoods">清除</el-button>
+                    <el-button type="primary" @@click="AddGoods">确 定</el-button>
+                </div>
+            </el-dialog>
+        </template>
+    </div>
+</div>
+<!--内容面板：end-->
+@section scripts{
+    <script src="~/Scripts/mydata/goods.js?v=2.2"></script>
+    <script type="text/javascript">
+        $(function () {
+            pagejs.init();
+        });
+    </script>
+
+    <style>
+        .xin{
+
+            color:red;
+            /*float:right;*/
+           
+        }
+
+    </style>
+}

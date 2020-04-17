@@ -1,0 +1,147 @@
+﻿
+@{
+    ViewBag.Title = "生成详细数据表";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!--头标题-->
+<div class="right_content_title">
+    <h5>@ViewBag.Title </h5>
+</div>
+
+<!--内容面板-->
+<div class="right_content_wrapper">
+    <div id="app">
+        <template>
+            <el-form ref="form" :model="form" inline size="mini">
+                <el-row type="flex">
+                    <el-form-item label="系列类型" label-width="110px">
+                        <el-input v-model="form.unit_kind" style="width:200px;" clearable></el-input>
+                    </el-form-item>
+
+                    <el-form-item label="系列编号" label-width="110px">
+                        <el-input v-model="form.code" style="width:200px;" clearable></el-input>
+                    </el-form-item>
+
+                    <el-form-item label="系列名称" label-width="110px">
+                        <el-input v-model="form.unit_name" style="width:200px;" clearable></el-input>
+                    </el-form-item>
+                    <el-form-item label="商品名称" label-width="110px">
+                        <el-input v-model="form.goods_name" style="width:200px;" clearable></el-input>
+                    </el-form-item>
+
+                    <el-form-item label="MD5" label-width="110px">
+                        <el-input v-model="form.MD5" style="width:200px;" clearable></el-input>
+                    </el-form-item>
+
+                    <el-form-item label="是否卖出" label-width="110px">
+                        <el-input v-model="form.isSell" style="width:200px;" clearable></el-input>
+                    </el-form-item>
+                    <el-form-item label="卖出时间" label-width="110px">
+                        <el-date-picker v-model="form.sellTime"
+                                        type="date"
+                                        placeholder="选择日期">
+                        </el-date-picker>
+                    </el-form-item>
+
+
+                    
+
+                    <el-form-item label="是否已发货" label-width="110px">
+                        <el-input v-model="form.MD5" style="width:200px;" clearable></el-input>
+                    </el-form-item>
+
+
+                    <el-form-item>
+                        <el-button type="primary" @@click="onSubmit" icon="el-icon-search">查询</el-button>
+                    </el-form-item>
+                </el-row>
+            </el-form>
+
+            <div class="sep_line"></div>
+
+            <div class="block" style="width:80%;margin:5px;">
+                @*<el-button type="success" size="mini" @@click="exportFile" icon="el-icon-download">导出数据</el-button>*@
+
+                <el-button type="success" size="mini" @@click="showAdd()" icon="el-icon-download">新增</el-button>
+            </div>
+
+            <el-table :data="tableData" style="98%" size="small" height="500"
+                      v-loading="loading"
+                      border
+                      element-loading-text="拼命加载中"
+                      element-loading-spinner="el-icon-loading"
+                      element-loading-background="rgba(0, 0, 0, 0.8)">
+                <el-table-column prop="id" label="编号" width="50" align="center"></el-table-column>
+                <el-table-column prop="unit_kind" label="系列类型" width="100" align="center"></el-table-column>
+                <el-table-column prop="unit_name" label="系列名称" width="300" align="center"></el-table-column>
+                <el-table-column prop="count" label="商品名称" width="80" align="center"></el-table-column>
+                <el-table-column prop="number" label="盲盒编号" width="80" align="center"></el-table-column>
+                <el-table-column prop="ping_string" label="生成字符串" width="80" align="center"></el-table-column>
+                <el-table-column prop="isSell" label="是否卖出" width="80" align="center"></el-table-column>
+                <el-table-column prop="isSend" label="是否发货" width="80" align="center"></el-table-column>
+                <el-table-column prop="express_fee" label="快递费用" width="80" align="center"></el-table-column>
+                
+               
+
+                <el-table-column label="操作" width="200" align="center">
+                    <template slot-scope="scope">
+                        <el-button size="mini" type="text" @@click="Send(scope.row)">确认发货</el-button>
+                    </template>
+                </el-table-column>
+            </el-table>
+            <div class="block" style="width:80%;">
+                <el-pagination @@size-change="handleSizeChange"
+                               @@current-change="handleCurrentChange"
+                               :current-page="currentPage"
+                               :page-sizes="pageSizes"
+                               :page-size="pageSize"
+                               layout="total, sizes, prev, pager, next, jumper"
+                               :total="total">
+                </el-pagination>
+            </div>
+            <!--弹出框-->
+            <el-dialog :title="addForm.title" :visible.sync="dialogFormVisible" v-loading="formLoading" width="40%">
+                <el-form :model="addForm" size="mini">
+
+                    <el-form-item label="" style="display: none;">
+                        <el-input v-model="addForm.id" clearable></el-input>
+                    </el-form-item>
+                  
+                  
+                    <el-form-item label="发货日期" label-width="110px">
+                        <el-date-picker v-model="addForm.sell_time"
+                                        type="date"
+                                        placeholder="选择日期">
+                        </el-date-picker>
+                    </el-form-item>
+
+                </el-form>
+                <div slot="footer" class="dialog-footer">
+                    <el-button @@click="dialogFormVisible = false">取 消</el-button>
+                    <el-button type="primary" @@click="Update_sell_time">确 定</el-button>
+                </div>
+            </el-dialog>
+
+            <!--弹出框2-->
+       
+        </template>
+    </div>
+</div>
+<!--内容面板：end-->
+@section scripts{
+    <script src="~/Scripts/mydata/unit.js?v=2.3"></script>
+    <script type="text/javascript">
+        $(function () {
+            pagejs.init();
+        });
+    </script>
+
+    <style>
+        .xin {
+            color: red;
+            /*float:right;*/
+        }
+    </style>
+}

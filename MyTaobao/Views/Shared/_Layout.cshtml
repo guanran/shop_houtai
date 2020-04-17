@@ -1,0 +1,107 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - MyTaobao后台</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link href="~/assets/css/css.css" rel="stylesheet" />
+    <link href="~/assets/css/jquery.control.css" rel="stylesheet" />
+
+
+    <link href="~/Content/css/css.css" rel="stylesheet" />
+    @*<script src="~/Scripts/jquery-3.3.1.js"></script>*@
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+    <script src="~/Scripts/jquery.control.js"></script>
+    <script src="~/Scripts/jquery.control.init.js"></script>
+
+    @*<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>*@
+    <script src="~/Scripts/vue.js"></script>
+    <script src="~/Scripts/common.js"></script>
+
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<body>
+    <!-- BEGIN HEADER -->
+    <div id="header">
+        <div class="inner1100" style="width:calc(100% - 60px)">
+            <div class="logo"><a href="@(Url.Action("Index", "Project"))"></a></div>
+            <div style="float:left; height:25px;line-height:25px;margin:17px 0 0 0;width:200px;">
+            
+            </div>
+            <div class="right_wrapper">
+                <div class="fr"><a href="javascript:void(0);" class="sys_exit" onclick="sysExit()">退出</a></div>
+                <span>|</span>
+                <div class="fr"><a href="javascript:changePassword();" class="sys_set">修改密码</a></div>
+                <span>|</span>
+            
+                @*<div class="sys_wrapper">欢迎您，@(ViewBag.current_admin_user.user_name)</div>*@
+            </div>
+        </div>
+
+    </div>
+    <!-- END HEADER -->
+
+    <div class="content inner1100">
+        <!-- BEGIN LEFTMENU -->
+        <div class="leftmenu yfmenu">
+            <div class="top"></div>
+            <ul class="treeview">
+
+                <li class="lv1" id="m22"><a href="@Url.Action("Index", "Goods")">商品管理</a></li>
+                <li class="line1"></li>
+                <li class="lv1" id="m1"><a href="@Url.Action("Index","Unit")">系列管理</a></li>
+                <li class="line1"></li>
+                <li class="lv1" id="m1"><a href="@Url.Action("ShowData","Unit")">生成数据管理</a></li>
+
+
+
+                @*<li class="lv1_haschild"><a href="javascript:void(0);" onclick="submenu('role_sub',this)">用户权限</a></li>
+
+        <li class="lv2" id="m1"><a href="@Url.Action("Index", "PowerRole")" class="role_sub">开通用户</a></li>
+
+        <li class="lv1" id="m1"><a href="@Url.Action("SuggestionInfo", "Suggestion")" class="maintain_sub">意见反馈</a></li>*@
+
+            </ul>
+                <div class="bottom"></div>
+            </div>
+            <!-- END LEFTMENU -->
+            <div class="right_content">
+                @RenderBody()
+            </div>
+            <div class="clearboth"></div>
+        </div>
+        <!-- BEGIN FOOTER -->
+        <div class="footer">
+            <div class="inner1100 footer_wrapper">
+                &copy; @DateTime.Now.Year - 我的MyTaobao后台
+            </div>
+            @*<div id="app">
+                    <template>
+                        <el-button plain @@click="open">
+                            可自动关闭
+                        </el-button>
+                        <el-button plain @@click="open2">
+                            不会自动关闭
+                        </el-button>
+                        <el-button type="text" @@click="open3">点击打开 Message Box</el-button>
+                        <el-button type="text" @@click="open4">点击打开 Message Box</el-button>
+                    </template>
+                </div>*@
+        </div>
+        <!-- END FOOTER -->
+
+
+        @*@Scripts.Render("~/bundles/jquery")*@
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

@@ -1,0 +1,155 @@
+﻿
+@using Entity.mydata;
+
+@{
+    t_unit model = ViewBag.unit_model;
+    if (model == null)
+    {
+        model = new t_unit();
+    }
+    ViewBag.Title = model.code + "-系列商品列表";
+
+   
+    if (ViewBag.goods_list == null||ViewBag.goods_list.Count==0)
+    {
+        List<t_unit_goods> goods_list = new List<t_unit_goods>();
+    }
+    else
+    {
+         List<t_unit_goods> goods_list = ViewBag.goods_list;
+
+    }
+}
+
+<input type="hidden" id="pid" value="@(model.id)" />
+
+
+<!--头标题-->
+<div class="right_content_title">
+    <h5>@ViewBag.Title </h5>
+
+   
+    <div class="btn_return btn_jus"><a href="@Url.Action("Index", "Unit", new { back = "1" })">返回</a></div>
+</div>
+
+
+<!--内容面板-->
+<div class="right_content_wrapper">
+    <div id="app">
+        <template>
+            <el-button type="success" size="mini" @@click="showAdd()" icon="el-icon-download">新增</el-button>
+            <el-table :data="tableData" style="98%" size="small" height="500"
+                v-loading="loading"   
+                border
+                :summary-Method="getSummaries"
+                show-summary                  
+                element-loading-text="拼命加载中"
+                element-loading-spinner="el-icon-loading"
+                element-loading-background="rgba(0, 0, 0, 0.8)">
+                <el-table-column prop="id" label="序号" width="50" align="center"></el-table-column>
+                <el-table-column prop="goods_id" label="商品编号" width="110" align="center"></el-table-column>
+                <el-table-column prop="goods_name" label="商品名称" width="300" align="center"></el-table-column>
+                <el-table-column prop="goods_name_new" label="自定义商品名称" width="250" align="center"></el-table-column>
+                <el-table-column prop="count" label="加入数量" width="80" align="center"></el-table-column>
+                <el-table-column prop="price" label="估计成本" width="80" align="center"></el-table-column>
+                <el-table-column prop="sell_min_price" label="最低售价" width="80" align="center"></el-table-column>
+                <el-table-column prop="sell_max_price" label="最高售价" width="80" align="center">
+                </el-table-column>
+                <el-table-column label="操作" width="200" align="center">
+                    <template slot-scope="scope">
+                        <el-button size="mini" type="text" @@click="showUpdate(scope.row)">修改</el-button>
+
+                        <el-button size="mini" type="text" @@click="Delete(scope.row.id)">删除</el-button>
+                    </template>
+                </el-table-column>
+            </el-table>
+            <div class="block" style="width:80%;">
+                <el-pagination @@size-change="handleSizeChange"
+                               @@current-change="handleCurrentChange"
+                               :current-page="currentPage"
+                               :page-sizes="pageSizes"
+                               :page-size="pageSize"
+                               layout="total, sizes, prev, pager, next, jumper"
+                               :total="total">
+                </el-pagination>
+            </div>
+
+            <!--弹出框-->
+            <el-dialog :title="addForm.title" :visible.sync="dialogFormVisible" v-loading="formLoading" width="50%">
+                <el-form :model="addForm" size="mini">
+
+                    <el-form-item label="" style="display: none;">
+                        <el-input v-model="addForm.id" clearable></el-input>
+                    </el-form-item>
+
+                    @*<el-form-item label="商品" label-width="110px">
+                    <span class="xin">*</span>
+                    <el-input v-model="addForm.code" style="width:200px;" clearable></el-input>
+                </el-form-item>*@
+
+                    <el-form-item label="商品" :label-width="formLabelWidth">
+                        <el-row class="demo-autocomplete">
+                            <el-col  span="300" style="width:300px;" >
+                                @*<div class="sub-title"></div>*@
+                                <el-autocomplete class="inline-input"
+                                                 autosize 
+                                                 v-model="addForm.goods_name"
+                                                 :fetch-suggestions="querySearch"
+                                                 placeholder="请输入商品编号或名称"
+                                                 :trigger-on-focus="false"
+                                                 @*@@select="handleSelect"*@></el-autocomplete>
+                            </el-col>
+                        </el-row>
+                    </el-form-item>
+
+
+                    <el-form-item label="自定义名称" label-width="100px">
+                        <span class="xin">*</span>
+                        <el-input v-model="addForm.goods_name_new" autosize  style="width:300px;" clearable></el-input>
+                    </el-form-item>
+
+                    <el-form-item label="加入数量" label-width="100px">
+                        <span class="xin">*</span>
+                        <el-input v-model="addForm.count" style="width:300px;" clearable></el-input>
+                    </el-form-item>
+
+                    <el-form-item label="估计成本" label-width="100px">
+                        <span class="xin">*</span>
+                        <el-input v-model="addForm.price" style="width:300px;" clearable></el-input>
+                    </el-form-item>
+
+                    <el-form-item label="售价区间" label-width="100px">
+
+                        <el-input v-model="addForm.sell_min_price" style="width:150px;"></el-input>
+                        -
+                        <el-input v-model="addForm.sell_max_price" style="width:150px;"></el-input>
+                    </el-form-item>
+
+                </el-form>
+                <div slot="footer" class="dialog-footer">
+                    <el-button @@click="dialogFormVisible = false">取 消</el-button>
+                    @*<el-button @@click="clearAdd">清除</el-button>*@
+                    <el-button type="primary" @@click="Add">确 定</el-button>
+                </div>
+            </el-dialog>
+
+
+        </template>
+    </div>
+</div>
+<!--内容面板：end-->
+<div class="right_content_bottom"></div>
+@section scripts{
+    <script src="~/Scripts/mydata/UnitGoodsList.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            pagejs.init();
+        });
+    </script>
+    <style>
+        .xin {
+            color: red;
+            /*float:right;*/
+        }
+    </style>
+}
