@@ -1,0 +1,2533 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Activities</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Activities.AddToDictionary`2">
+      <summary>用于向字典添加键和值的活动。</summary>
+      <typeparam name="TKey">键的类型。</typeparam>
+      <typeparam name="TValue">值的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.AddToDictionary`2.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.AddToDictionary`2" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.AddToDictionary`2.#ctor(System.Activities.InArgument{System.Collections.Generic.IDictionary{`0,`1}},System.Activities.InArgument{`0},System.Activities.InArgument{`1})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.AddToDictionary`2" /> 类的新实例。</summary>
+      <param name="dictionary">目标字典。</param>
+      <param name="key">要添加的键。</param>
+      <param name="value">要添加的值。</param>
+    </member>
+    <member name="P:Microsoft.Activities.AddToDictionary`2.Dictionary">
+      <summary>获取或设置目标字典。</summary>
+      <returns>返回目标字典。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.AddToDictionary`2.Key">
+      <summary>获取或设置要添加的键。</summary>
+      <returns>返回要添加的键。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.AddToDictionary`2.Value">
+      <summary>获取或设置要添加的值。</summary>
+      <returns>返回要添加的值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.BuildCollection`1">
+      <summary>用于构建集合的活动。</summary>
+      <typeparam name="TValue">集合中项目的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.BuildCollection`1.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.BuildCollection`1" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.BuildCollection`1.#ctor(System.Activities.InArgument{System.Collections.Generic.IEnumerable{`0}})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.BuildCollection`1" /> 类的新实例。</summary>
+      <param name="collection">源集合。</param>
+    </member>
+    <member name="P:Microsoft.Activities.BuildCollection`1.Collection">
+      <summary>获取或设置源集合。</summary>
+      <returns>返回源集合。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.BuildCollection`1.Values">
+      <summary>获取要添加到集合中的值集。</summary>
+      <returns>返回要添加到集合中的值集。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.BuildDictionary`2">
+      <summary>用于构建字典的活动。</summary>
+      <typeparam name="TKey">键的类型。</typeparam>
+      <typeparam name="TValue">值的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.BuildDictionary`2.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.BuildDictionary`2" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.BuildDictionary`2.#ctor(System.Activities.InArgument{System.Collections.Generic.IDictionary{`0,`1}})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.BuildDictionary`2" /> 类的新实例。</summary>
+      <param name="dictionary">源字典。</param>
+    </member>
+    <member name="P:Microsoft.Activities.BuildDictionary`2.Dictionary">
+      <summary>获取或设置源字典。</summary>
+      <returns>返回源字典。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.BuildDictionary`2.Values">
+      <summary>获取要添加的键和值的字典。</summary>
+      <returns>返回要添加的键和值的字典。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.BuildDynamicValue">
+      <summary>用于构建 DynamicValue 的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.BuildDynamicValue.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.BuildDynamicValue" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Activities.BuildDynamicValue.Properties">
+      <summary>获取或设置要添加到 DynamicValue 的属性名称和值的字典。</summary>
+      <returns>返回属性名称和值的字典。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.BuildDynamicValue.Result">
+      <summary>获取或设置生成的 DynamicValue。</summary>
+      <returns>返回构建的 DynamicValue。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.ClearDictionary`2">
+      <summary>用于清除字典的活动。</summary>
+      <typeparam name="TKey">键的类型。</typeparam>
+      <typeparam name="TValue">值的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.ClearDictionary`2.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.ClearDictionary`2" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.ClearDictionary`2.#ctor(System.Activities.InArgument{System.Collections.Generic.IDictionary{`0,`1}})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.ClearDictionary`2" /> 类的新实例。</summary>
+      <param name="dictionary">目标字典。</param>
+    </member>
+    <member name="P:Microsoft.Activities.ClearDictionary`2.Dictionary">
+      <summary>获取或设置目标字典。</summary>
+      <returns>返回目标字典。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.ContainsDynamicValueProperty">
+      <summary>用于检查 DynamicValue 是否包含特定属性的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.ContainsDynamicValueProperty.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.ContainsDynamicValueProperty" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.ContainsDynamicValueProperty.#ctor(System.Activities.InArgument{Microsoft.Activities.DynamicValue},System.Activities.InArgument{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.ContainsDynamicValueProperty" /> 类的新实例。</summary>
+      <param name="source">源 DynamicValue。</param>
+      <param name="propertyName">要搜索的属性名称。</param>
+    </member>
+    <member name="P:Microsoft.Activities.ContainsDynamicValueProperty.PropertyName">
+      <summary>获取或设置要搜索的属性名称。</summary>
+      <returns>返回目标属性名称。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.ContainsDynamicValueProperty.Source">
+      <summary>获取或设置源 DynamicValue。</summary>
+      <returns>返回源 DynamicValue。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.CopyDynamicValue">
+      <summary>用于复制 DynamicValue 的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.CopyDynamicValue.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.CopyDynamicValue" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.CopyDynamicValue.#ctor(System.Activities.InArgument{Microsoft.Activities.DynamicValue},System.Activities.OutArgument{Microsoft.Activities.DynamicValue})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.CopyDynamicValue" /> 类的新实例。</summary>
+      <param name="source">源 DynamicValue。</param>
+      <param name="result">目标 DynamicValue。</param>
+    </member>
+    <member name="P:Microsoft.Activities.CopyDynamicValue.PropertyMapping">
+      <summary>获取一个字典，该字典将源 DynamicValue 中的属性名称映射到目标 DynamicValue 中的项目名称。</summary>
+      <returns>返回属性映射字典。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.CopyDynamicValue.Source">
+      <summary>获取或设置源 DynamicValue。</summary>
+      <returns>返回源 DynamicValue。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.CountCollection`1">
+      <summary>用于统计集合中项目数的活动。</summary>
+      <typeparam name="T">集合项目的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.CountCollection`1.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.CountCollection`1" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.CountCollection`1.#ctor(System.Activities.InArgument{System.Collections.Generic.ICollection{`0}})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.CountCollection`1" /> 类的新实例。</summary>
+      <param name="collection">目标集合。</param>
+    </member>
+    <member name="P:Microsoft.Activities.CountCollection`1.Collection">
+      <summary>获取或设置目标集合。</summary>
+      <returns>返回目标集合。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.CountDictionary`2">
+      <summary>用于统计字典中项目数的活动。</summary>
+      <typeparam name="TKey">键的类型。</typeparam>
+      <typeparam name="TValue">值的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.CountDictionary`2.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.CountDictionary`2" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.CountDictionary`2.#ctor(System.Activities.InArgument{System.Collections.Generic.IDictionary{`0,`1}})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.CountDictionary`2" /> 类的新实例。</summary>
+      <param name="dictionary">目标字典。</param>
+    </member>
+    <member name="P:Microsoft.Activities.CountDictionary`2.Dictionary">
+      <summary>获取或设置目标字典。</summary>
+      <returns>返回目标字典。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.CountDynamicValueItems">
+      <summary>用于统计 DynamicValue 中子项目数的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.CountDynamicValueItems.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.CountDynamicValueItems" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.CountDynamicValueItems.#ctor(System.Activities.InArgument{Microsoft.Activities.DynamicValue})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.CountDynamicValueItems" /> 类的新实例。</summary>
+      <param name="source">源 DynamicValue。</param>
+    </member>
+    <member name="P:Microsoft.Activities.CountDynamicValueItems.Source">
+      <summary>获取或设置源 DynamicValue。</summary>
+      <returns>返回 DynamicValue。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.CreateDynamicValue">
+      <summary>用于创建 DynamicValue 的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.CreateDynamicValue.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.CreateDynamicValue" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.CreateDynamicValue.#ctor(System.Activities.InArgument{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.CreateDynamicValue" /> 类的新实例。</summary>
+      <param name="propertyName">要添加的属性的名称。</param>
+    </member>
+    <member name="M:Microsoft.Activities.CreateDynamicValue.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument)">
+      <summary>初始化 <see cref="T:Microsoft.Activities.CreateDynamicValue" /> 类的新实例。</summary>
+      <param name="propertyName">要添加的属性的名称。</param>
+      <param name="propertyValue">要添加的属性的值。</param>
+    </member>
+    <member name="P:Microsoft.Activities.CreateDynamicValue.PropertyName">
+      <summary>获取或设置要添加的属性的名称。</summary>
+      <returns>返回属性名称。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.CreateDynamicValue.PropertyValue">
+      <summary>获取或设置要添加的属性的值。</summary>
+      <returns>返回属性值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.CreateDynamicValueFromMessage">
+      <summary>代表从消息创建 <see cref="T:Microsoft.Activities.DynamicValue" /> 的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.CreateDynamicValueFromMessage.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.CreateDynamicValueFromMessage" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Activities.CreateDynamicValueFromMessage.Headers">
+      <summary>获取或设置消息标头。</summary>
+      <returns>消息标头。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.CreateDynamicValueFromMessage.Value">
+      <summary>获取或设置要创建的属性的值。</summary>
+      <returns>要创建的属性的值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.CreateDynamicValueFromMessage.Version">
+      <summary>获取或设置消息的版本。</summary>
+      <returns>消息的版本。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.CreateException`1">
+      <summary>用于创建异常的活动。</summary>
+      <typeparam name="T">所创建异常的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.CreateException`1.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.CreateException`1" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Activities.CreateException`1.InnerException">
+      <summary>获取或设置内部异常。</summary>
+      <returns>返回内部异常。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.CreateException`1.Message">
+      <summary>获取或设置异常消息。</summary>
+      <returns>返回异常消息。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.CreateException`2">
+      <summary>用于创建异常的活动。</summary>
+      <typeparam name="T">所创建异常的类型。</typeparam>
+      <typeparam name="TResult">所返回异常的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.CreateException`2.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.CreateException`2" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Activities.CreateException`2.InnerException">
+      <summary>获取或设置内部异常。</summary>
+      <returns>返回内部异常。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.CreateException`2.Message">
+      <summary>获取或设置异常消息。</summary>
+      <returns>返回异常消息。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.CreateMessageFromDynamicValue">
+      <summary>代表从 <see cref="T:Microsoft.Activities.DynamicValue" /> 创建消息的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.CreateMessageFromDynamicValue.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.CreateMessageFromDynamicValue" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Activities.CreateMessageFromDynamicValue.Action">
+      <summary>获取或设置用于指定消息处理方式的操作。</summary>
+      <returns>用于指定消息处理方式的操作。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.CreateMessageFromDynamicValue.Body">
+      <summary>获取或设置消息正文。</summary>
+      <returns>消息正文。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.CreateMessageFromDynamicValue.Headers">
+      <summary>获取或设置消息标头。</summary>
+      <returns>消息标头。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.CreateMessageFromDynamicValue.Version">
+      <summary>获取或设置消息的版本。</summary>
+      <returns>消息的版本。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.CreateUriFromDynamicValue">
+      <summary>用于从输入 DynamicValue 创建 URI 的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.CreateUriFromDynamicValue.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.CreateUriFromDynamicValue" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.CreateUriFromDynamicValue.#ctor(System.Activities.InArgument{Microsoft.Activities.DynamicValue})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.CreateUriFromDynamicValue" /> 类的新实例。</summary>
+      <param name="options">一个 DynamicValue，其中包含 URI 的元素，例如方案、主机、端口、路径、查询和片段。</param>
+    </member>
+    <member name="P:Microsoft.Activities.CreateUriFromDynamicValue.Options">
+      <summary>获取或设置一个 DynamicValue，其中包含 URI 的元素，例如方案、主机、端口、路径、查询和片段。</summary>
+      <returns>返回配置的 DynamicValue。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.DictionaryContains`2">
+      <summary>用于检查字典是否包含特定项目的活动。</summary>
+      <typeparam name="TKey">键的类型。</typeparam>
+      <typeparam name="TValue">值的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.DictionaryContains`2.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.DictionaryContains`2" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.DictionaryContains`2.#ctor(System.Activities.InArgument{System.Collections.Generic.IDictionary{`0,`1}},System.Activities.InArgument{`0})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.DictionaryContains`2" /> 类的新实例。</summary>
+      <param name="dictionary">要搜索的字典。</param>
+      <param name="key">要搜索的键。</param>
+    </member>
+    <member name="M:Microsoft.Activities.DictionaryContains`2.#ctor(System.Activities.InArgument{System.Collections.Generic.IDictionary{`0,`1}},System.Activities.InArgument{`0},System.Activities.InArgument{`1})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.DictionaryContains`2" /> 类的新实例。</summary>
+      <param name="dictionary">要搜索的字典。</param>
+      <param name="key">要搜索的键。</param>
+      <param name="value">要匹配的值。</param>
+    </member>
+    <member name="P:Microsoft.Activities.DictionaryContains`2.Dictionary">
+      <summary>获取或设置要搜索的字典。</summary>
+      <returns>返回字典。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.DictionaryContains`2.Key">
+      <summary>获取或设置要搜索的键。</summary>
+      <returns>返回目标键。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.DictionaryContains`2.Value">
+      <summary>获取或设置要匹配的值。</summary>
+      <returns>返回目标值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.DynamicForEach`1">
+      <summary>一个活动，用于通过具有动态执行分支的集合执行活动。</summary>
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicForEach`1.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.DynamicForEach`1" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicForEach`1.#ctor(System.Activities.InArgument{System.Collections.Generic.IDictionary{System.String,`0}})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.DynamicForEach`1" /> 类的新实例。</summary>
+      <param name="values">要循环访问的值的集合。</param>
+    </member>
+    <member name="P:Microsoft.Activities.DynamicForEach`1.Body">
+      <summary>获取或设置要执行的活动集。</summary>
+      <returns>返回配置的活动集。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.DynamicForEach`1.BodyCompleted">
+      <summary>获取或设置完成分支时要执行的活动操作。</summary>
+      <returns>返回活动操作。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.DynamicForEach`1.UpdateValues">
+      <summary>获取或设置用于更新值的活动操作。</summary>
+      <returns>返回活动操作。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.DynamicForEach`1.Values">
+      <summary>获取或设置要循环访问的值的集合。</summary>
+      <returns>返回值的集合。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.DynamicValue">
+      <summary>代表一个动态数据结构，用于支持工作流中的键值对嵌套集。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.#ctor">
+      <summary>使用默认值初始化 <see cref="T:Microsoft.Activities.DynamicValue" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.#ctor(System.Boolean)">
+      <summary>使用布尔值初始化 <see cref="T:Microsoft.Activities.DynamicValue" /> 类的新实例。</summary>
+      <param name="value">要添加到 <see cref="T:Microsoft.Activities.DynamicValue" /> 的值。</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.#ctor(System.DateTime)">
+      <summary>使用 DateTime 值初始化 <see cref="T:Microsoft.Activities.DynamicValue" /> 类的新实例。</summary>
+      <param name="value">要添加到 <see cref="T:Microsoft.Activities.DynamicValue" /> 的值。</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.#ctor(System.Double)">
+      <summary>使用 Double 值初始化 <see cref="T:Microsoft.Activities.DynamicValue" /> 类的新实例。</summary>
+      <param name="value">要添加到 <see cref="T:Microsoft.Activities.DynamicValue" /> 的值。</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.#ctor(System.Guid)">
+      <summary>使用 GUID 值初始化 <see cref="T:Microsoft.Activities.DynamicValue" /> 类的新实例。</summary>
+      <param name="value">要添加到 <see cref="T:Microsoft.Activities.DynamicValue" /> 的值。</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.#ctor(System.Int32)">
+      <summary>使用 Int32 值初始化 <see cref="T:Microsoft.Activities.DynamicValue" /> 类的新实例。</summary>
+      <param name="value">要添加到 <see cref="T:Microsoft.Activities.DynamicValue" /> 的值。</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.#ctor(System.String)">
+      <summary>使用 String 值初始化 <see cref="T:Microsoft.Activities.DynamicValue" /> 类的新实例。</summary>
+      <param name="value">要添加到 <see cref="T:Microsoft.Activities.DynamicValue" /> 的值。</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.Add(Microsoft.Activities.DynamicValue)">
+      <summary>以子项目的形式添加 <see cref="T:Microsoft.Activities.DynamicValue" />。</summary>
+      <param name="item">要添加的 <see cref="T:Microsoft.Activities.DynamicValue" />。</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.Clear">
+      <summary>清除 <see cref="T:Microsoft.Activities.DynamicValue" />。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.Contains(Microsoft.Activities.DynamicValue)">
+      <summary>确定 <see cref="T:Microsoft.Activities.DynamicValue" /> 是否包含目标项目。</summary>
+      <returns>如果 <see cref="T:Microsoft.Activities.DynamicValue" /> 包含目标项目，则为 true，否则为 false。</returns>
+      <param name="item">要搜索的子项目。</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.CopyTo(Microsoft.Activities.DynamicValue[],System.Int32)">
+      <summary>将 <see cref="T:Microsoft.Activities.DynamicValue" /> 复制到数组中。</summary>
+      <param name="array">用于保留 <see cref="T:Microsoft.Activities.DynamicValue" /> 副本的数组。</param>
+      <param name="arrayIndex">在其上开始复制的数组的索引。</param>
+    </member>
+    <member name="P:Microsoft.Activities.DynamicValue.Count">
+      <summary>获取 <see cref="T:Microsoft.Activities.DynamicValue" /> 中的子项目数。</summary>
+      <returns>
+        <see cref="T:Microsoft.Activities.DynamicValue" /> 中的子项目数。</returns>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.GetEnumerator">
+      <summary>获取循环访问 <see cref="T:Microsoft.Activities.DynamicValue" /> 的枚举数。</summary>
+      <returns>可用于循环访问 <see cref="T:Microsoft.Activities.DynamicValue" /> 的枚举数。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.DynamicValue.IsReadOnly">
+      <summary>获取一个值，用于指示 <see cref="T:Microsoft.Activities.DynamicValue" /> 是否为只读。</summary>
+      <returns>如果 <see cref="T:Microsoft.Activities.DynamicValue" /> 为只读，则为 true，否则为 false。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.DynamicValue.Item(System.Int32)">
+      <summary>按 ID 获取或设置项目。</summary>
+      <returns>具有指定 ID 的项目。</returns>
+      <param name="key">项目的 ID。</param>
+    </member>
+    <member name="P:Microsoft.Activities.DynamicValue.Item(System.String)">
+      <summary>按名称获取或设置项目。</summary>
+      <returns>具有指定名称的项目。</returns>
+      <param name="key">项目的名称。</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.op_Implicit(System.Boolean)~Microsoft.Activities.DynamicValue">
+      <summary>将布尔值强制转换成 <see cref="T:Microsoft.Activities.DynamicValue" />。</summary>
+      <returns>指定的布尔值的 <see cref="T:Microsoft.Activities.DynamicValue" /> 表示形式。</returns>
+      <param name="value">一个布尔值。</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.op_Implicit(System.DateTime)~Microsoft.Activities.DynamicValue">
+      <summary>将 DateTime 值强制转换成 <see cref="T:Microsoft.Activities.DynamicValue" />。</summary>
+      <returns>指定的 DateTime 值的 <see cref="T:Microsoft.Activities.DynamicValue" /> 表示形式。</returns>
+      <param name="value">一个 DateTime 值。</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.op_Implicit(System.Double)~Microsoft.Activities.DynamicValue">
+      <summary>将 Double 值强制转换成 <see cref="T:Microsoft.Activities.DynamicValue" />。</summary>
+      <returns>指定的 Double 值的 <see cref="T:Microsoft.Activities.DynamicValue" /> 表示形式。</returns>
+      <param name="value">一个 Double 值。</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.op_Implicit(System.Guid)~Microsoft.Activities.DynamicValue">
+      <summary>将 GUID 值强制转换成 <see cref="T:Microsoft.Activities.DynamicValue" />。</summary>
+      <returns>指定的 GUID 值的 <see cref="T:Microsoft.Activities.DynamicValue" /> 表示形式。</returns>
+      <param name="value">一个 GUID 值。</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.op_Implicit(System.Int32)~Microsoft.Activities.DynamicValue">
+      <summary>将 Int32 值强制转换成 <see cref="T:Microsoft.Activities.DynamicValue" />。</summary>
+      <returns>指定的 Int32 值的 <see cref="T:Microsoft.Activities.DynamicValue" /> 表示形式。</returns>
+      <param name="value">一个 Int32 值</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.op_Implicit(System.String)~Microsoft.Activities.DynamicValue">
+      <summary>将 String 值强制转换成 <see cref="T:Microsoft.Activities.DynamicValue" />。</summary>
+      <returns>指定的 String 值的 <see cref="T:Microsoft.Activities.DynamicValue" /> 表示形式。</returns>
+      <param name="value">一个 String 值。</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.Parse(System.String)">
+      <summary>将字符串分析成 <see cref="T:Microsoft.Activities.DynamicValue" />。</summary>
+      <returns>指定的字符串的 <see cref="T:Microsoft.Activities.DynamicValue" />。</returns>
+      <param name="encodedValue">
+        <see cref="T:Microsoft.Activities.DynamicValue" /> 的编码值。</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.Remove(Microsoft.Activities.DynamicValue)">
+      <summary>从 <see cref="T:Microsoft.Activities.DynamicValue" /> 中删除项目。</summary>
+      <returns>如果操作成功，则为 true，否则为 false。</returns>
+      <param name="item">要删除的项目。</param>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.System#Collections#IEnumerable#GetEnumerator">
+      <summary>获取循环访问 <see cref="T:Microsoft.Activities.DynamicValue" /> 的枚举数。</summary>
+      <returns>可用于循环访问 <see cref="T:Microsoft.Activities.DynamicValue" /> 的枚举数。</returns>
+    </member>
+    <member name="M:Microsoft.Activities.DynamicValue.ToString">
+      <summary>返回 <see cref="T:Microsoft.Activities.DynamicValue" /> 的字符串表示形式。</summary>
+      <returns>
+        <see cref="T:Microsoft.Activities.DynamicValue" /> 的字符串表示形式。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.ExternalVariable">
+      <summary>一个工作流变量，用于对即使实例已持久化，也可以在外部进行查询的全局状态建模。</summary>
+    </member>
+    <member name="P:Microsoft.Activities.ExternalVariable.Default">
+      <summary>获取或设置外部变量未设置时将使用的默认值。</summary>
+      <returns>返回外部变量未设置时将使用的默认值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.ExternalVariable.DefaultCore">
+      <summary>获取或设置默认值对象。</summary>
+      <returns>返回默认值对象。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.ExternalVariable.Modifiers">
+      <summary>获取或设置变量修饰符。</summary>
+      <returns>返回配置的变量修饰符。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.ExternalVariable.Name">
+      <summary>获取或设置外部变量的名称。</summary>
+      <returns>返回外部变量的名称。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.ExternalVariable.Type">
+      <summary>获取外部变量的类型。</summary>
+      <returns>返回外部变量的类型。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.ExternalVariable`1">
+      <summary>一个工作流变量，用于对即使实例已持久化，也可以在外部进行查询的全局状态建模。</summary>
+      <typeparam name="T">外部变量的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.ExternalVariable`1.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.ExternalVariable`1" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Activities.ExternalVariable`1.Default">
+      <summary>获取或设置外部变量未设置时将使用的默认值。</summary>
+    </member>
+    <member name="P:Microsoft.Activities.ExternalVariable`1.Type">
+      <summary>获取外部变量的类型。</summary>
+      <returns>返回外部变量的类型。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.ExternalVariableReference`1">
+      <summary>一个活动，用于检索要在表达式左值中使用的外部变量的位置引用。</summary>
+      <typeparam name="T">外部变量的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.ExternalVariableReference`1.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.ExternalVariableReference`1" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Activities.ExternalVariableReference`1.Name">
+      <summary>获取或设置要引用的外部变量的名称。</summary>
+      <returns>返回外部变量的位置引用。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.ExternalVariableValue`1">
+      <summary>用于检索外部变量值的活动。</summary>
+      <typeparam name="T">外部变量的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.ExternalVariableValue`1.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.ExternalVariableValue`1" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.ExternalVariableValue`1.#ctor(System.String)">
+      <summary>初始化 <see cref="T:Microsoft.Activities.ExternalVariableValue`1" /> 类的新实例。</summary>
+      <param name="name">要检索的外部变量的名称。</param>
+    </member>
+    <member name="M:Microsoft.Activities.ExternalVariableValue`1.#ctor(System.String,System.Activities.InArgument{`0})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.ExternalVariableValue`1" /> 类的新实例。</summary>
+      <param name="name">要检索的外部变量的名称。</param>
+      <param name="defaultValue">未设置外部变量情况下将返回的默认值。</param>
+    </member>
+    <member name="P:Microsoft.Activities.ExternalVariableValue`1.Default">
+      <summary>获取或设置外部变量未设置时将返回的默认值。</summary>
+      <returns>返回配置的默认值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.ExternalVariableValue`1.Name">
+      <summary>获取或设置要检索的外部变量的名称。</summary>
+      <returns>返回要检索的外部变量的名称。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.FromUriTemplate">
+      <summary>用于从 UriTemplate 创建 URI 的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.FromUriTemplate.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.FromUriTemplate" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Activities.FromUriTemplate.BaseAddress">
+      <summary>获取或设置基址。</summary>
+      <returns>返回基址。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.FromUriTemplate.Parameters">
+      <summary>获取或设置命名的参数及其值。</summary>
+      <returns>返回参数集。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.FromUriTemplate.Template">
+      <summary>获取或设置用于格式设置的 UriTemplate。</summary>
+      <returns>返回 UriTemplate。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.GetConfigurationValue">
+      <summary>用于从工作流配置检索值的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.GetConfigurationValue.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.GetConfigurationValue" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.GetConfigurationValue.#ctor(System.String)">
+      <summary>初始化 <see cref="T:Microsoft.Activities.GetConfigurationValue" /> 类的新实例。</summary>
+      <param name="name">要检索的配置参数的名称。</param>
+    </member>
+    <member name="P:Microsoft.Activities.GetConfigurationValue.DefaultValue">
+      <summary>获取或设置找不到配置值时要返回的默认值。</summary>
+      <returns>返回配置的默认值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.GetConfigurationValue.Name">
+      <summary>获取或设置要检索的配置参数的名称。</summary>
+      <returns>返回目标配置条目名称。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.GetDictionaryValue`2">
+      <summary>用于检索特定字典条目值的活动。</summary>
+      <typeparam name="TKey">键的类型。</typeparam>
+      <typeparam name="TValue">值的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.GetDictionaryValue`2.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.GetDictionaryValue`2" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.GetDictionaryValue`2.#ctor(System.Activities.InArgument{System.Collections.Generic.IDictionary{`0,`1}},System.Activities.InArgument{`0})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.GetDictionaryValue`2" /> 类的新实例。</summary>
+      <param name="dictionary">要从中进行读取的字典。</param>
+      <param name="key">要检索的条目的键。</param>
+    </member>
+    <member name="P:Microsoft.Activities.GetDictionaryValue`2.Dictionary">
+      <summary>获取或设置要从中进行读取的字典。</summary>
+      <returns>返回源字典。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.GetDictionaryValue`2.Key">
+      <summary>获取或设置要检索的条目的键。</summary>
+      <returns>返回目标键。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.GetDynamicValueProperties">
+      <summary>用于从 DynamicValue 检索多个属性的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.GetDynamicValueProperties.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.GetDynamicValueProperties" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Activities.GetDynamicValueProperties.Properties">
+      <summary>获取或设置要检索的属性名称集以及这些属性名称的存储位置。</summary>
+      <returns>返回配置的属性名称集和位置引用。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.GetDynamicValueProperties.Source">
+      <summary>获取或设置要从中进行读取的 DynamicValue。</summary>
+      <returns>返回源 DynamicValue。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.GetDynamicValueProperty`1">
+      <summary>用于从 DynamicValue 返回属性的活动。</summary>
+      <typeparam name="T">要返回的属性的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.GetDynamicValueProperty`1.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.GetDynamicValueProperty`1" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.GetDynamicValueProperty`1.#ctor(System.Activities.InArgument{Microsoft.Activities.DynamicValue})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.GetDynamicValueProperty`1" /> 类的新实例。</summary>
+      <param name="source">要从中进行读取的 DynamicValue。</param>
+    </member>
+    <member name="M:Microsoft.Activities.GetDynamicValueProperty`1.#ctor(System.Activities.InArgument{Microsoft.Activities.DynamicValue},System.Activities.InArgument{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.GetDynamicValueProperty`1" /> 类的新实例。</summary>
+      <param name="source">要从中进行读取的 DynamicValue。</param>
+      <param name="propertyName">要检索的属性的名称和路径。</param>
+    </member>
+    <member name="P:Microsoft.Activities.GetDynamicValueProperty`1.PropertyName">
+      <summary>获取或设置要检索的属性的名称和路径。</summary>
+      <returns>返回属性名称。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.GetDynamicValueProperty`1.Source">
+      <summary>获取或设置要从中进行读取的 DynamicValue。</summary>
+      <returns>返回源 DynamicValue。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.GetInstanceAddress">
+      <summary>用于返回执行工作流实例地址的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.GetInstanceAddress.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.GetInstanceAddress" /> 类的新实例。</summary>
+    </member>
+    <member name="T:Microsoft.Activities.GetItemFromCollection`1">
+      <summary>用于从集合中获取项目的活动。</summary>
+      <typeparam name="TItem">项目的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.GetItemFromCollection`1.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.GetItemFromCollection`1" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.GetItemFromCollection`1.#ctor(System.Activities.InArgument{System.Collections.Generic.ICollection{`0}},System.Activities.InArgument{System.Int32})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.GetItemFromCollection`1" /> 类的新实例。</summary>
+      <param name="collection">项目的集合。</param>
+      <param name="index">要返回的项目的索引。</param>
+    </member>
+    <member name="P:Microsoft.Activities.GetItemFromCollection`1.Collection">
+      <summary>获取或设置项目的集合。</summary>
+      <returns>返回项目的集合。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.GetItemFromCollection`1.Index">
+      <summary>获取或设置要返回的项目的索引。</summary>
+      <returns>返回索引。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.IsEmptyDynamicValue">
+      <summary>用于确定 DynamicValue 是否为空的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.IsEmptyDynamicValue.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.IsEmptyDynamicValue" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.IsEmptyDynamicValue.#ctor(System.Activities.InArgument{Microsoft.Activities.DynamicValue})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.IsEmptyDynamicValue" /> 类的新实例。</summary>
+      <param name="input">目标 DynamicValue。</param>
+    </member>
+    <member name="P:Microsoft.Activities.IsEmptyDynamicValue.Input">
+      <summary>获取或设置目标 DynamicValue。</summary>
+      <returns>返回目标 DynamicValue。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.ParseDynamicValue">
+      <summary>代表用于将 JSON 字符串分析成 <see cref="T:Microsoft.Activities.DynamicValue" /> 的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.ParseDynamicValue.#ctor">
+      <summary>使用默认值初始化 <see cref="T:Microsoft.Activities.ParseDynamicValue" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.ParseDynamicValue.#ctor(System.Activities.InArgument{System.String})">
+      <summary>使用 JSON 字符串初始化 <see cref="T:Microsoft.Activities.ParseDynamicValue" /> 类的新实例。</summary>
+      <param name="json">要分析的 JSON 字符串。</param>
+    </member>
+    <member name="M:Microsoft.Activities.ParseDynamicValue.CacheMetadata(System.Activities.CodeActivityMetadata)">
+      <summary>创建并验证活动参数、变量、子活动和活动委派的描述。</summary>
+      <param name="metadata">活动元数据，用于封装活动参数、变量、子活动和活动委派。</param>
+    </member>
+    <member name="M:Microsoft.Activities.ParseDynamicValue.Execute(System.Activities.CodeActivityContext)">
+      <summary>执行活动。</summary>
+      <returns>分析的字符串的 <see cref="T:Microsoft.Activities.DynamicValue" />。</returns>
+      <param name="context">执行活动的执行上下文。</param>
+    </member>
+    <member name="P:Microsoft.Activities.ParseDynamicValue.Json">
+      <summary>获取或设置要分析的 JSON 字符串。</summary>
+      <returns>要分析的 JSON 字符串。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.RemoveFromDictionary`2">
+      <summary>用于从字典中删除项目的活动。</summary>
+      <typeparam name="TKey">键的类型。</typeparam>
+      <typeparam name="TValue">值的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.RemoveFromDictionary`2.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.RemoveFromDictionary`2" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.RemoveFromDictionary`2.#ctor(System.Activities.InArgument{System.Collections.Generic.IDictionary{`0,`1}},System.Activities.InArgument{`0})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.RemoveFromDictionary`2" /> 类的新实例。</summary>
+      <param name="dictionary">要从中进行删除的字典。</param>
+      <param name="key">要删除的项目的键。</param>
+    </member>
+    <member name="P:Microsoft.Activities.RemoveFromDictionary`2.Dictionary">
+      <summary>获取或设置要从中进行删除的字典。</summary>
+      <returns>返回目标字典。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.RemoveFromDictionary`2.Key">
+      <summary>获取或设置要删除的项目的键。</summary>
+      <returns>返回用于删除的键。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.SetUserStatus">
+      <summary>代表用于设置实例 UserStatus 值的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.SetUserStatus.#ctor">
+      <summary>使用默认值初始化 <see cref="T:Microsoft.Activities.SetUserStatus" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.SetUserStatus.#ctor(System.Activities.InArgument{System.String})">
+      <summary>使用 UserStatus 的描述初始化 <see cref="T:Microsoft.Activities.SetUserStatus" /> 类的新实例。</summary>
+      <param name="description">要分配到 UserStatus 变量的描述。</param>
+    </member>
+    <member name="P:Microsoft.Activities.SetUserStatus.Description">
+      <summary>获取或设置要分配到 UserStatus 变量的描述。</summary>
+      <returns>要分配到 UserStatus 变量的描述。</returns>
+    </member>
+    <member name="F:Microsoft.Activities.SetUserStatus.UserStatusVariable">
+      <summary>完全限定的 UserStatus 变量标识符。</summary>
+    </member>
+    <member name="T:Microsoft.Activities.SplitKeyValuePair`2">
+      <summary>用于从 KeyValuePair 中拆分出键和值的活动。</summary>
+      <typeparam name="TKey">键的类型。</typeparam>
+      <typeparam name="TValue">值的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.SplitKeyValuePair`2.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.SplitKeyValuePair`2" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.SplitKeyValuePair`2.#ctor(System.Activities.InArgument{System.Collections.Generic.KeyValuePair{`0,`1}})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.SplitKeyValuePair`2" /> 类的新实例。</summary>
+      <param name="input">要拆分的 KeyValuePair。</param>
+    </member>
+    <member name="P:Microsoft.Activities.SplitKeyValuePair`2.Input">
+      <summary>获取或设置要拆分的 KeyValuePair。</summary>
+      <returns>返回要拆分的 KeyValuePair。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.SplitKeyValuePair`2.Key">
+      <summary>获取或设置 KeyValuePair 的键。</summary>
+      <returns>返回 KeyValuePair 的键。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.SplitKeyValuePair`2.Value">
+      <summary>获取或设置 KeyValuePair 的值。</summary>
+      <returns>返回 KeyValuePair 的值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.WorkflowInstanceResult">
+      <summary>工作流实例的执行结果。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.WorkflowInstanceResult.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.WorkflowInstanceResult" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Activities.WorkflowInstanceResult.Reason">
+      <summary>获取或设置工作流实例执行状态的原因。</summary>
+      <returns>返回原因值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.WorkflowInstanceResult.State">
+      <summary>获取或设置工作流实例的状态。</summary>
+      <returns>返回工作流实例的状态。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.WorkflowInstanceStatus">
+      <summary>工作流实例的状态。</summary>
+    </member>
+    <member name="F:Microsoft.Activities.WorkflowInstanceStatus.NotSpecified">
+      <summary>未指定实例状态。</summary>
+    </member>
+    <member name="F:Microsoft.Activities.WorkflowInstanceStatus.NotStarted">
+      <summary>未启动实例。</summary>
+    </member>
+    <member name="F:Microsoft.Activities.WorkflowInstanceStatus.Started">
+      <summary>已启动实例。</summary>
+    </member>
+    <member name="F:Microsoft.Activities.WorkflowInstanceStatus.Suspended">
+      <summary>实例已挂起。</summary>
+    </member>
+    <member name="F:Microsoft.Activities.WorkflowInstanceStatus.Canceling">
+      <summary>正在取消实例。</summary>
+    </member>
+    <member name="F:Microsoft.Activities.WorkflowInstanceStatus.Canceled">
+      <summary>已取消实例。</summary>
+    </member>
+    <member name="F:Microsoft.Activities.WorkflowInstanceStatus.Terminated">
+      <summary>已终止实例。</summary>
+    </member>
+    <member name="F:Microsoft.Activities.WorkflowInstanceStatus.Completed">
+      <summary>已完成实例。</summary>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.Add`1">
+      <summary>用于将两个数相加的活动。</summary>
+      <typeparam name="T">数的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Add`1.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.Add`1" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Add`1.#ctor(System.Activities.InArgument{`0},System.Activities.InArgument{`0})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.Add`1" /> 类的新实例。</summary>
+      <param name="left">左值。</param>
+      <param name="right">右值。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Add`1.Left">
+      <summary>获取或设置左值。</summary>
+      <returns>返回左值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Add`1.Right">
+      <summary>获取或设置右值。</summary>
+      <returns>返回右值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.AddToDate">
+      <summary>用于向输入的 DateTime 或 TimeSpan 执行添加操作的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.AddToDate.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.AddToDate" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.AddToDate.Days">
+      <summary>获取或设置天数值。</summary>
+      <returns>返回天数值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.AddToDate.Hours">
+      <summary>获取或设置小时值。</summary>
+      <returns>返回小时值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.AddToDate.Input">
+      <summary>获取或设置输入的 DateTime。</summary>
+      <returns>返回输入的 DateTime。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.AddToDate.Milliseconds">
+      <summary>获取或设置毫秒值。</summary>
+      <returns>返回毫秒值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.AddToDate.Minutes">
+      <summary>获取或设置分钟值。</summary>
+      <returns>返回分钟值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.AddToDate.Months">
+      <summary>获取或设置月数值。</summary>
+      <returns>返回月数值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.AddToDate.Seconds">
+      <summary>获取或设置秒值。</summary>
+      <returns>返回秒值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.AddToDate.TimeSpan">
+      <summary>获取或设置输入的 TimeSpan。</summary>
+      <returns>返回输入的 TimeSpan。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.And">
+      <summary>用于执行二进制 And 运算的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.And.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.And" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.And.#ctor(System.Activities.InArgument{System.Boolean},System.Activities.InArgument{System.Boolean})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.And" /> 类的新实例。</summary>
+      <param name="left">左值。</param>
+      <param name="right">右值。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.And.Left">
+      <summary>获取或设置左值。</summary>
+      <returns>返回左值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.And.Right">
+      <summary>获取或设置右值。</summary>
+      <returns>返回右值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.CompareDate">
+      <summary>用于比较两个 DateTime 的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.CompareDate.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.CompareDate" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.CompareDate.#ctor(System.Activities.InArgument{System.DateTime},System.Activities.InArgument{System.DateTime})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.CompareDate" /> 类的新实例。</summary>
+      <param name="left">左值。</param>
+      <param name="right">右值。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CompareDate.Left">
+      <summary>获取或设置左值。</summary>
+      <returns>返回左值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CompareDate.Right">
+      <summary>获取或设置右值。</summary>
+      <returns>返回右值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.CompareString">
+      <summary>用于比较两个字符串的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.CompareString.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.CompareString" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.CompareString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.CompareString" /> 类的新实例。</summary>
+      <param name="left">左值。</param>
+      <param name="right">右值。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CompareString.IgnoreCase">
+      <summary>获取或设置是否区分大小写。</summary>
+      <returns>返回是否区分大小写。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CompareString.Left">
+      <summary>获取或设置左值。</summary>
+      <returns>返回左值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CompareString.Right">
+      <summary>获取或设置右值。</summary>
+      <returns>返回右值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.ConcatString">
+      <summary>用于将字符串连接起来的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ConcatString.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ConcatString" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ConcatString.#ctor(System.Activities.InArgument{System.String}[])">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ConcatString" /> 类的新实例。</summary>
+      <param name="inputs">要连接的输入。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ConcatString.Inputs">
+      <summary>获取或设置要连接的输入。</summary>
+      <returns>返回要连接的输入。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.ContainsString">
+      <summary>用于检查输入字符串是否包含目标值的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ContainsString.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ContainsString" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ContainsString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ContainsString" /> 类的新实例。</summary>
+      <param name="input">输入的字符串。</param>
+      <param name="searchValue">目标值。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ContainsString.CacheMetadata(System.Activities.CodeActivityMetadata)">
+      <summary>创建并验证活动的参数、变量、子活动和活动委派的描述。</summary>
+      <param name="metadata">活动的元数据，用于封装活动的参数、变量、子活动和活动委派。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ContainsString.Execute(System.Activities.CodeActivityContext)">
+      <summary>执行活动。</summary>
+      <returns>返回输入字符串是否包含目标值。</returns>
+      <param name="context">执行活动的执行上下文。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ContainsString.Input">
+      <summary>获取或设置输入的字符串。</summary>
+      <returns>返回输入的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ContainsString.SearchValue">
+      <summary>获取或设置目标值。</summary>
+      <returns>返回目标值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.Convert`2">
+      <summary>用于将输入值从一种类型转换成另一种类型的活动。</summary>
+      <typeparam name="TSource">源类型。</typeparam>
+      <typeparam name="TDestination">目标类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Convert`2.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.Convert`2" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Convert`2.#ctor(System.Activities.InArgument{`0})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.Convert`2" /> 类的新实例。</summary>
+      <param name="input">输入值。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Convert`2.CacheMetadata(System.Activities.CodeActivityMetadata)">
+      <summary>创建并验证活动的参数、变量、子活动和活动委派的描述。</summary>
+      <param name="metadata">活动的元数据，用于封装活动的参数、变量、子活动和活动委派。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Convert`2.Execute(System.Activities.CodeActivityContext)">
+      <summary>执行活动。</summary>
+      <param name="context">执行活动的执行上下文。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Convert`2.Input">
+      <summary>获取或设置输入值。</summary>
+      <returns>返回输入值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.ConvertTimeZone">
+      <summary>用于根据输入的 TimeZone 转换 DateTime 的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ConvertTimeZone.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ConvertTimeZone" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ConvertTimeZone.#ctor(System.Activities.InArgument{System.DateTime},System.Activities.InArgument{System.String},System.Activities.InArgument{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ConvertTimeZone" /> 类的新实例。</summary>
+      <param name="input">输入的 DateTime。</param>
+      <param name="sourceTimeZone">源 TimeZone。</param>
+      <param name="destinationTimeZone">目标 TimeZone。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ConvertTimeZone.DestinationTimeZone">
+      <summary>获取或设置目标时区。</summary>
+      <returns>返回目标时区。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ConvertTimeZone.Input">
+      <summary>获取或设置输入的 DateTime。</summary>
+      <returns>返回输入的 DateTime。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ConvertTimeZone.SourceTimeZone">
+      <summary>获取或设置源时区。</summary>
+      <returns>返回源时区。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.CreateDate">
+      <summary>用于根据输入字段创建 DateTime 的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.CreateDate.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.CreateDate" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.CreateDate.#ctor(System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.CreateDate" /> 类的新实例。</summary>
+      <param name="year">年份值。</param>
+      <param name="month">月份值。</param>
+      <param name="day">日期值。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.CreateDate.#ctor(System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.CreateDate" /> 类的新实例。</summary>
+      <param name="year">年份值。</param>
+      <param name="month">月份值。</param>
+      <param name="day">日期值。</param>
+      <param name="hour">小时值。</param>
+      <param name="minute">分钟值。</param>
+      <param name="second">秒值。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.CreateDate.#ctor(System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.DateTimeKind})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.CreateDate" /> 类的新实例。</summary>
+      <param name="year">年份值。</param>
+      <param name="month">月份值。</param>
+      <param name="day">日期值。</param>
+      <param name="hour">小时值。</param>
+      <param name="minute">分钟值。</param>
+      <param name="second">秒值。</param>
+      <param name="kind">DateTime 的类型：local 或 UTC。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CreateDate.Day">
+      <summary>获取或设置日期值。</summary>
+      <returns>返回日期值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CreateDate.Hour">
+      <summary>获取或设置小时值。</summary>
+      <returns>返回小时值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CreateDate.Kind">
+      <summary>获取或设置 DateTime 的类型：local 或 UTC。</summary>
+      <returns>返回 DateTime 的类型。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CreateDate.Minute">
+      <summary>获取或设置分钟值。</summary>
+      <returns>返回分钟值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CreateDate.Month">
+      <summary>获取或设置月份值。</summary>
+      <returns>返回月份值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CreateDate.Second">
+      <summary>获取或设置秒值。</summary>
+      <returns>返回秒值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CreateDate.Year">
+      <summary>获取或设置年份值。</summary>
+      <returns>返回年份值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.CreateTimeSpan">
+      <summary>用于根据输入字段创建 TimeSpan 的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.CreateTimeSpan.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.CreateTimeSpan" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.CreateTimeSpan.#ctor(System.Activities.InArgument{System.Double},System.Activities.InArgument{System.Double},System.Activities.InArgument{System.Double},System.Activities.InArgument{System.Double})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.CreateTimeSpan" /> 类的新实例。</summary>
+      <param name="days">天数值。</param>
+      <param name="hours">小时值。</param>
+      <param name="minutes">分钟值。</param>
+      <param name="seconds">秒值。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CreateTimeSpan.Days">
+      <summary>获取或设置天数值。</summary>
+      <returns>返回天数值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CreateTimeSpan.Hours">
+      <summary>获取或设置小时值。</summary>
+      <returns>返回小时值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CreateTimeSpan.Minutes">
+      <summary>获取或设置分钟值。</summary>
+      <returns>返回分钟值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.CreateTimeSpan.Seconds">
+      <summary>获取或设置秒值。</summary>
+      <returns>返回秒值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.CurrentDate">
+      <summary>用于返回当前 DateTime 值的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.CurrentDate.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.CurrentDate" /> 类的新实例。</summary>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.DateField">
+      <summary>代表 DateTime 的特定字段。</summary>
+    </member>
+    <member name="F:Microsoft.Activities.Expressions.DateField.Year">
+      <summary>年份值。</summary>
+    </member>
+    <member name="F:Microsoft.Activities.Expressions.DateField.Month">
+      <summary>月份值。</summary>
+    </member>
+    <member name="F:Microsoft.Activities.Expressions.DateField.Day">
+      <summary>日期值。</summary>
+    </member>
+    <member name="F:Microsoft.Activities.Expressions.DateField.Hour">
+      <summary>小时值。</summary>
+    </member>
+    <member name="F:Microsoft.Activities.Expressions.DateField.Minute">
+      <summary>分钟值。</summary>
+    </member>
+    <member name="F:Microsoft.Activities.Expressions.DateField.Second">
+      <summary>秒值。</summary>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.DateInRange">
+      <summary>用于检查输入日期是否在特定范围内的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.DateInRange.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.DateInRange" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.DateInRange.#ctor(System.Activities.InArgument{System.DateTime},System.Activities.InArgument{System.DateTime},System.Activities.InArgument{System.DateTime})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.DateInRange" /> 类的新实例。</summary>
+      <param name="input">要检查的输入日期。</param>
+      <param name="start">开始日期。</param>
+      <param name="end">结束日期。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.DateInRange.End">
+      <summary>获取或设置结束日期。</summary>
+      <returns>返回结束日期。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.DateInRange.Input">
+      <summary>获取或设置要检查的输入日期。</summary>
+      <returns>返回要检查的输入日期。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.DateInRange.Start">
+      <summary>获取或设置开始日期。</summary>
+      <returns>返回开始日期。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.DelayUntil">
+      <summary>代表用于将工作流执行延迟到特定 DateTime 的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.DelayUntil.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.DelayUntil" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.DelayUntil.#ctor(System.Activities.InArgument{System.DateTime})">
+      <summary>使用唤醒工作流的指定日期初始化 <see cref="T:Microsoft.Activities.Expressions.DelayUntil" /> 类的新实例。</summary>
+      <param name="date">唤醒工作流的日期。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.DelayUntil.Date">
+      <summary>获取或设置唤醒工作流的日期。</summary>
+      <returns>唤醒工作流的日期。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.Divide`1">
+      <summary>用于将两个数相除的活动。</summary>
+      <typeparam name="T">数的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Divide`1.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.Divide`1" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Divide`1.#ctor(System.Activities.InArgument{`0},System.Activities.InArgument{`0})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.Divide`1" /> 类的新实例。</summary>
+      <param name="left">左值。</param>
+      <param name="right">右值。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Divide`1.Left">
+      <summary>获取或设置左值。</summary>
+      <returns>返回左值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Divide`1.Right">
+      <summary>获取或设置右值。</summary>
+      <returns>返回右值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.EndsWithString">
+      <summary>用于确定字符串是否以特定子字符串结尾的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.EndsWithString.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.EndsWithString" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.EndsWithString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.EndsWithString" /> 类的新实例。</summary>
+      <param name="input">输入的字符串。</param>
+      <param name="searchValue">目标搜索字符串。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.EndsWithString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String},System.Boolean)">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.EndsWithString" /> 类的新实例。</summary>
+      <param name="input">输入的字符串。</param>
+      <param name="searchValue">目标搜索字符串。</param>
+      <param name="ignoreCase">比较时是否区分大小写。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.EndsWithString.IgnoreCase">
+      <summary>获取或设置是否区分大小写。</summary>
+      <returns>返回是否区分大小写。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.EndsWithString.Input">
+      <summary>获取或设置输入的字符串。</summary>
+      <returns>返回输入的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.EndsWithString.SearchValue">
+      <summary>获取或设置目标搜索字符串。</summary>
+      <returns>返回目标搜索字符串。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.ExpressionContainerReference`1">
+      <summary>用于包装转换的表达式树，使结构通过转换得到保留的活动。</summary>
+      <typeparam name="TResult">结果类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ExpressionContainerReference`1.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ExpressionContainerReference`1" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ExpressionContainerReference`1.#ctor(System.Activities.Activity{System.Activities.Location{`0}},System.Collections.Generic.Dictionary{System.String,System.Activities.Argument})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ExpressionContainerReference`1" /> 类的新实例。</summary>
+      <param name="expression">以活动形式存在的表达式树。</param>
+      <param name="arguments">表达式的参数集。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ExpressionContainerReference`1.Arguments">
+      <summary>获取表达式的参数集。</summary>
+      <returns>返回表达式的参数集。</returns>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ExpressionContainerReference`1.CacheMetadata(System.Activities.NativeActivityMetadata)">
+      <summary>创建并验证活动的参数、变量、子活动和活动委派的描述。</summary>
+      <param name="metadata">活动的元数据，用于封装活动的参数、变量、子活动和活动委派。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ExpressionContainerReference`1.Execute(System.Activities.NativeActivityContext)">
+      <summary>运行活动的执行逻辑。</summary>
+      <param name="context">执行活动的执行上下文。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ExpressionContainerReference`1.Expression">
+      <summary>获取或设置表达式树。</summary>
+      <returns>返回表达式树。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.ExpressionContainerValue`1">
+      <summary>用于包装转换的表达式树，使结构通过转换得到保留的活动。</summary>
+      <typeparam name="TResult">结果类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ExpressionContainerValue`1.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ExpressionContainerValue`1" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ExpressionContainerValue`1.#ctor(System.Activities.Activity{`0},System.Collections.Generic.Dictionary{System.String,System.Activities.Argument})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ExpressionContainerValue`1" /> 类的新实例。</summary>
+      <param name="expression">以活动形式存在的表达式树。</param>
+      <param name="arguments">表达式的参数集。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ExpressionContainerValue`1.Arguments">
+      <summary>获取表达式的参数集。</summary>
+      <returns>返回表达式的参数集。</returns>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ExpressionContainerValue`1.CacheMetadata(System.Activities.NativeActivityMetadata)">
+      <summary>创建并验证活动的参数、变量、子活动和活动委派的描述。</summary>
+      <param name="metadata">活动的元数据，用于封装活动的参数、变量、子活动和活动委派。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ExpressionContainerValue`1.Execute(System.Activities.NativeActivityContext)">
+      <summary>运行活动的执行逻辑。</summary>
+      <param name="context">执行活动的执行上下文。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ExpressionContainerValue`1.Expression">
+      <summary>获取或设置表达式树。</summary>
+      <returns>返回表达式树。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.FormatString">
+      <summary>用于设置字符串格式的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.FormatString.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.FormatString" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.FormatString.#ctor(System.Activities.InArgument{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.FormatString" /> 类的新实例。</summary>
+      <param name="format">要设置格式的输入字符串。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.FormatString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String}[])">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.FormatString" /> 类的新实例。</summary>
+      <param name="format">要设置格式的输入字符串。</param>
+      <param name="arguments">要应用到输入字符串的参数。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.FormatString.Arguments">
+      <summary>获取或设置要应用到输入字符串的参数。</summary>
+      <returns>返回要应用到输入字符串的参数。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.FormatString.Format">
+      <summary>获取或设置要设置格式的输入字符串。</summary>
+      <returns>返回要设置格式的输入字符串。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.GetDateField">
+      <summary>用于检索 DateTime 中特定字段的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.GetDateField.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.GetDateField" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.GetDateField.#ctor(System.Activities.InArgument{System.DateTime})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.GetDateField" /> 类的新实例。</summary>
+      <param name="input">输入的 DateTime。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.GetDateField.#ctor(System.Activities.InArgument{System.DateTime},Microsoft.Activities.Expressions.DateField)">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.GetDateField" /> 类的新实例。</summary>
+      <param name="input">输入的 DateTime。</param>
+      <param name="dateField">要检索的日期字段。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetDateField.DateField">
+      <summary>获取或设置要检索的日期字段。</summary>
+      <returns>返回要检索的日期字段。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetDateField.Input">
+      <summary>获取或设置输入的 DateTime。</summary>
+      <returns>返回输入的 DateTime。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.GetDateFields">
+      <summary>代表用于检索 DateTime 中特定字段的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.GetDateFields.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.GetDateFields" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetDateFields.Day">
+      <summary>获取或设置日期值。</summary>
+      <returns>日期值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetDateFields.Hour">
+      <summary>获取或设置小时值。</summary>
+      <returns>小时值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetDateFields.Input">
+      <summary>获取或设置输入的 DateTime。</summary>
+      <returns>输入的 DateTime。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetDateFields.Kind">
+      <summary>获取或设置支持活动外部数据流的绑定终端类型。</summary>
+      <returns>支持活动外部数据流的绑定终端类型。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetDateFields.Minute">
+      <summary>获取或设置分钟值。</summary>
+      <returns>分钟值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetDateFields.Month">
+      <summary>获取或设置月份值。</summary>
+      <returns>月份值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetDateFields.Second">
+      <summary>获取或设置秒值。</summary>
+      <returns>秒值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetDateFields.Year">
+      <summary>获取或设置年份值。</summary>
+      <returns>年份值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.GetElapsedDays">
+      <summary>用于计算两个输入 DateTime 之间的已用天数的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.GetElapsedDays.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.GetElapsedDays" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.GetElapsedDays.#ctor(System.Activities.InArgument{System.DateTime},System.Activities.InArgument{System.DateTime})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.GetElapsedDays" /> 类的新实例。</summary>
+      <param name="start">开始日期和时间。</param>
+      <param name="end">结束日期和时间。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetElapsedDays.End">
+      <summary>获取或设置结束日期和时间。</summary>
+      <returns>返回结束日期和时间。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetElapsedDays.ExcludedDates">
+      <summary>获取或设置已排除日期集。</summary>
+      <returns>返回已排除日期集。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetElapsedDays.ExcludeWeekends">
+      <summary>获取或设置是否要在计算中排除周末。</summary>
+      <returns>返回是否要在计算中排除周末。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetElapsedDays.Start">
+      <summary>获取或设置开始日期和时间。</summary>
+      <returns>返回开始日期和时间。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.GetElapsedTime">
+      <summary>用于计算两个输入 DateTime 之间的已用时间的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.GetElapsedTime.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.GetElapsedTime" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.GetElapsedTime.#ctor(System.Activities.InArgument{System.DateTime},System.Activities.InArgument{System.DateTime})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.GetElapsedTime" /> 类的新实例。</summary>
+      <param name="start">开始日期和时间。</param>
+      <param name="end">结束日期和时间。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetElapsedTime.End">
+      <summary>获取或设置结束日期和时间。</summary>
+      <returns>返回结束日期和时间。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetElapsedTime.Start">
+      <summary>获取或设置开始日期和时间。</summary>
+      <returns>返回开始日期和时间。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.GetTimeSpanFields">
+      <summary>用于检索 TimeSpan 中特定字段的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.GetTimeSpanFields.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.GetTimeSpanFields" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetTimeSpanFields.Days">
+      <summary>获取或设置天数值。</summary>
+      <returns>返回天数值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetTimeSpanFields.Hours">
+      <summary>获取或设置小时值。</summary>
+      <returns>返回小时值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetTimeSpanFields.Input">
+      <summary>获取或设置输入的 TimeSpan。</summary>
+      <returns>返回输入的 TimeSpan。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetTimeSpanFields.Minutes">
+      <summary>获取或设置分钟值。</summary>
+      <returns>返回分钟值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetTimeSpanFields.Seconds">
+      <summary>获取或设置秒值。</summary>
+      <returns>返回秒值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetTimeSpanFields.TotalDays">
+      <summary>获取或设置总天数。</summary>
+      <returns>返回总天数。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetTimeSpanFields.TotalHours">
+      <summary>获取或设置总小时数。</summary>
+      <returns>返回总小时数。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetTimeSpanFields.TotalMinutes">
+      <summary>获取或设置总分钟数。</summary>
+      <returns>返回总分钟数。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.GetTimeSpanFields.TotalSeconds">
+      <summary>获取或设置总秒数。</summary>
+      <returns>返回总秒数。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.IndexOfString">
+      <summary>用于在输入的字符串中查找子字符串索引的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IndexOfString.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IndexOfString" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IndexOfString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IndexOfString" /> 类的新实例。</summary>
+      <param name="input">输入的字符串。</param>
+      <param name="searchValue">要查找的值。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IndexOfString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String},System.Activities.InArgument{System.Int32})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IndexOfString" /> 类的新实例。</summary>
+      <param name="input">输入的字符串。</param>
+      <param name="searchValue">要查找的值。</param>
+      <param name="startIndex">要开始搜索的索引。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IndexOfString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String},System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IndexOfString" /> 类的新实例。</summary>
+      <param name="input">输入的字符串。</param>
+      <param name="searchValue">要查找的值。</param>
+      <param name="startIndex">要开始搜索的索引。</param>
+      <param name="count">要搜索的字符数。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IndexOfString.Count">
+      <summary>获取或设置要搜索的字符数。</summary>
+      <returns>返回要搜索的字符数。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IndexOfString.Input">
+      <summary>获取或设置输入的字符串。</summary>
+      <returns>返回输入的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IndexOfString.SearchValue">
+      <summary>获取或设置要查找的值。</summary>
+      <returns>返回要查找的值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IndexOfString.StartIndex">
+      <summary>获取或设置要开始搜索的索引。</summary>
+      <returns>返回要开始搜索的索引。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.IsEmptyGuid">
+      <summary>用于检查 Guid 是否为空的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsEmptyGuid.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IsEmptyGuid" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsEmptyGuid.#ctor(System.Activities.InArgument{System.Guid})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IsEmptyGuid" /> 类的新实例。</summary>
+      <param name="value">输入的 Guid。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsEmptyGuid.Value">
+      <summary>获取或设置输入的 Guid。</summary>
+      <returns>返回输入的 Guid。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.IsEmptyString">
+      <summary>用于检查字符串是否为空的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsEmptyString.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IsEmptyString" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsEmptyString.#ctor(System.Activities.InArgument{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IsEmptyString" /> 类的新实例。</summary>
+      <param name="input">输入的字符串。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsEmptyString.#ctor(System.Activities.InArgument{System.String},System.Boolean)">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IsEmptyString" /> 类的新实例。</summary>
+      <param name="input">输入的字符串。</param>
+      <param name="checkForWhiteSpace">是否检查空格。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsEmptyString.CheckForWhiteSpace">
+      <summary>获取或设置是否检查空格。</summary>
+      <returns>返回是否检查空格。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsEmptyString.Input">
+      <summary>获取或设置输入的字符串。</summary>
+      <returns>返回输入的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.IsEqualBoolean">
+      <summary>用于检查两个布尔值是否相等的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsEqualBoolean.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IsEqualBoolean" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsEqualBoolean.#ctor(System.Activities.InArgument{System.Boolean},System.Activities.InArgument{System.Boolean})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IsEqualBoolean" /> 类的新实例。</summary>
+      <param name="left">左值。</param>
+      <param name="right">右值。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsEqualBoolean.Left">
+      <summary>获取或设置左值。</summary>
+      <returns>返回左值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsEqualBoolean.Right">
+      <summary>获取或设置右值。</summary>
+      <returns>返回右值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.IsEqualGuid">
+      <summary>用于检查两个 Guid 是否相等的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsEqualGuid.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IsEqualGuid" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsEqualGuid.#ctor(System.Activities.InArgument{System.Guid},System.Activities.InArgument{System.Guid})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IsEqualGuid" /> 类的新实例。</summary>
+      <param name="left">左值。</param>
+      <param name="right">右值。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsEqualGuid.Left">
+      <summary>获取或设置左值。</summary>
+      <returns>返回左值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsEqualGuid.Right">
+      <summary>获取或设置右值。</summary>
+      <returns>返回右值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.IsEqualNumber`1">
+      <summary>用于检查两个数是否相等的活动。</summary>
+      <typeparam name="T">数的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsEqualNumber`1.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IsEqualNumber`1" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsEqualNumber`1.#ctor(System.Activities.InArgument{`0},System.Activities.InArgument{`0})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IsEqualNumber`1" /> 类的新实例。</summary>
+      <param name="left">左值。</param>
+      <param name="right">右值。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsEqualNumber`1.Left">
+      <summary>获取或设置左值。</summary>
+      <returns>返回左值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsEqualNumber`1.Right">
+      <summary>获取或设置右值。</summary>
+      <returns>返回右值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.IsEqualString">
+      <summary>用于有选择性地根据正则表达式模式检查两个字符串是否匹配的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsEqualString.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IsEqualString" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsEqualString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IsEqualString" /> 类的新实例。</summary>
+      <param name="input">输入的字符串。</param>
+      <param name="text">目标文本。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsEqualString.IgnoreCase">
+      <summary>获取或设置是否忽略大小写。</summary>
+      <returns>返回是否忽略大小写。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsEqualString.Input">
+      <summary>获取或设置输入的字符串。</summary>
+      <returns>返回输入的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsEqualString.Pattern">
+      <summary>获取或设置要使用的正则表达式模式。</summary>
+      <returns>返回要使用的正则表达式模式。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsEqualString.Text">
+      <summary>获取或设置要匹配的目标文本。</summary>
+      <returns>返回要匹配的目标文本。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.IsFalse">
+      <summary>用于检查表达式是否为 false 的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsFalse.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IsFalse" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsFalse.#ctor(System.Activities.InArgument{System.Boolean})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IsFalse" /> 类的新实例。</summary>
+      <param name="input">输入的表达式。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsFalse.Input">
+      <summary>获取或设置输入的表达式。</summary>
+      <returns>返回输入的表达式。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.IsGreaterThan`1">
+      <summary>用于检查一个数是否大于另一个数的活动。</summary>
+      <typeparam name="T">数的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsGreaterThan`1.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IsGreaterThan`1" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsGreaterThan`1.#ctor(System.Activities.InArgument{`0},System.Activities.InArgument{`0})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IsGreaterThan`1" /> 类的新实例。</summary>
+      <param name="left">左值。</param>
+      <param name="right">右值。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsGreaterThan`1.Left">
+      <summary>获取或设置左值。</summary>
+      <returns>返回左值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsGreaterThan`1.Right">
+      <summary>获取或设置右值。</summary>
+      <returns>返回右值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.IsGreaterThanOrEqual`1">
+      <summary>用于检查一个数是否大于或等于另一个数的活动。</summary>
+      <typeparam name="T">数的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsGreaterThanOrEqual`1.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IsGreaterThanOrEqual`1" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsGreaterThanOrEqual`1.#ctor(System.Activities.InArgument{`0},System.Activities.InArgument{`0})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IsGreaterThanOrEqual`1" /> 类的新实例。</summary>
+      <param name="left">左值。</param>
+      <param name="right">右值。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsGreaterThanOrEqual`1.Left">
+      <summary>获取或设置左值。</summary>
+      <returns>返回左值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsGreaterThanOrEqual`1.Right">
+      <summary>获取或设置右值。</summary>
+      <returns>返回右值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.IsLessThan`1">
+      <summary>用于检查一个数是否小于另一个数的活动。</summary>
+      <typeparam name="T">数的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsLessThan`1.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IsLessThan`1" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsLessThan`1.#ctor(System.Activities.InArgument{`0},System.Activities.InArgument{`0})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IsLessThan`1" /> 类的新实例。</summary>
+      <param name="left">左值。</param>
+      <param name="right">右值。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsLessThan`1.Left">
+      <summary>获取或设置左值。</summary>
+      <returns>返回左值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsLessThan`1.Right">
+      <summary>获取或设置右值。</summary>
+      <returns>返回右值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.IsLessThanOrEqual`1">
+      <summary>用于检查一个数是否小于或等于另一个数的活动。</summary>
+      <typeparam name="T">数的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsLessThanOrEqual`1.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IsLessThanOrEqual`1" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsLessThanOrEqual`1.#ctor(System.Activities.InArgument{`0},System.Activities.InArgument{`0})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IsLessThanOrEqual`1" /> 类的新实例。</summary>
+      <param name="left">左值。</param>
+      <param name="right">右值。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsLessThanOrEqual`1.Left">
+      <summary>获取或设置左值。</summary>
+      <returns>返回左值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsLessThanOrEqual`1.Right">
+      <summary>获取或设置右值。</summary>
+      <returns>返回右值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.IsTrue">
+      <summary>用于检查表达式是否为 true 的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsTrue.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IsTrue" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.IsTrue.#ctor(System.Activities.InArgument{System.Boolean})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.IsTrue" /> 类的新实例。</summary>
+      <param name="input">输入的表达式。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.IsTrue.Input">
+      <summary>获取或设置输入的表达式。</summary>
+      <returns>返回输入的表达式。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.Mod`1">
+      <summary>用于执行 Mod 运算的活动。</summary>
+      <typeparam name="T">数的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Mod`1.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.Mod`1" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Mod`1.#ctor(System.Activities.InArgument{`0},System.Activities.InArgument{`0})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.Mod`1" /> 类的新实例。</summary>
+      <param name="left">左值。</param>
+      <param name="right">右值。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Mod`1.Left">
+      <summary>获取或设置左值。</summary>
+      <returns>返回左值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Mod`1.Right">
+      <summary>获取或设置右值。</summary>
+      <returns>返回右值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.Multiply`1">
+      <summary>用于将两个数相乘的活动。</summary>
+      <typeparam name="T">数的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Multiply`1.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.Multiply`1" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Multiply`1.#ctor(System.Activities.InArgument{`0},System.Activities.InArgument{`0})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.Multiply`1" /> 类的新实例。</summary>
+      <param name="left">左值。</param>
+      <param name="right">右值。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Multiply`1.Left">
+      <summary>获取或设置左值。</summary>
+      <returns>返回左值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Multiply`1.Right">
+      <summary>获取或设置右值。</summary>
+      <returns>返回右值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.NewGuid">
+      <summary>用于创建新 Guid 的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.NewGuid.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.NewGuid" /> 类的新实例。</summary>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.Not">
+      <summary>用于执行二进制 Not 运算的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Not.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.Not" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Not.#ctor(System.Activities.InArgument{System.Boolean})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.Not" /> 类的新实例。</summary>
+      <param name="operand">要使用的操作数。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Not.Operand">
+      <summary>获取或设置要使用的操作数。</summary>
+      <returns>返回要使用的操作数。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.NullLiteral`1">
+      <summary>用于指定一个 null 值的活动。</summary>
+      <typeparam name="T">返回值的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.NullLiteral`1.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.NullLiteral`1" /> 类的新实例。</summary>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.Or">
+      <summary>用于执行二进制 Or 运算的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Or.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.Or" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Or.#ctor(System.Activities.InArgument{System.Boolean},System.Activities.InArgument{System.Boolean})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.Or" /> 类的新实例。</summary>
+      <param name="left">左值。</param>
+      <param name="right">右值。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Or.Left">
+      <summary>获取或设置左值。</summary>
+      <returns>返回左值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Or.Right">
+      <summary>获取或设置右值。</summary>
+      <returns>返回右值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.ParseBoolean">
+      <summary>用于分析布尔值的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ParseBoolean.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ParseBoolean" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ParseBoolean.#ctor(System.Activities.InArgument{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ParseBoolean" /> 类的新实例。</summary>
+      <param name="input">要分析的值。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ParseBoolean.Input">
+      <summary>获取或设置要分析的值。</summary>
+      <returns>返回要分析的值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.ParseDate">
+      <summary>用于分析日期的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ParseDate.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ParseDate" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ParseDate.#ctor(System.Activities.InArgument{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ParseDate" /> 类的新实例。</summary>
+      <param name="value">要分析的值。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ParseDate.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ParseDate" /> 类的新实例。</summary>
+      <param name="value">要分析的值。</param>
+      <param name="cultureName">目标区域性。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ParseDate.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String},System.Activities.InArgument{System.Globalization.DateTimeStyles})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ParseDate" /> 类的新实例。</summary>
+      <param name="value">要分析的值。</param>
+      <param name="cultureName">目标区域性。</param>
+      <param name="dateTimeStyles">DateTime 的样式。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ParseDate.CultureName">
+      <summary>获取或设置目标区域性。</summary>
+      <returns>返回目标区域性。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ParseDate.DateTimeStyles">
+      <summary>获取或设置 DateTime 样式。</summary>
+      <returns>返回 DateTime 样式。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ParseDate.Value">
+      <summary>获取或设置要分析的值。</summary>
+      <returns>返回要分析的值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.ParseGuid">
+      <summary>用于分析 Guid 的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ParseGuid.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ParseGuid" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ParseGuid.#ctor(System.Activities.InArgument{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ParseGuid" /> 类的新实例。</summary>
+      <param name="value">要分析的值。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ParseGuid.Value">
+      <summary>获取或设置要分析的值。</summary>
+      <returns>返回要分析的值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.ParseNumber`1">
+      <summary>用于分析数的活动。</summary>
+      <typeparam name="T">数的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ParseNumber`1.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ParseNumber`1" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ParseNumber`1.#ctor(System.Activities.InArgument{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ParseNumber`1" /> 类的新实例。</summary>
+      <param name="value">要分析的值。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ParseNumber`1.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.Globalization.NumberStyles})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ParseNumber`1" /> 类的新实例。</summary>
+      <param name="value">要分析的值。</param>
+      <param name="numberStyles">数的样式。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ParseNumber`1.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ParseNumber`1" /> 类的新实例。</summary>
+      <param name="value">要分析的值。</param>
+      <param name="cultureName">目标区域性。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ParseNumber`1.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String},System.Activities.InArgument{System.Globalization.NumberStyles})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ParseNumber`1" /> 类的新实例。</summary>
+      <param name="value">要分析的值。</param>
+      <param name="cultureName">目标区域性。</param>
+      <param name="numberStyles">数的样式。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ParseNumber`1.CultureName">
+      <summary>获取或设置目标区域性。</summary>
+      <returns>返回目标区域性。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ParseNumber`1.NumberStyles">
+      <summary>获取或设置数字样式。</summary>
+      <returns>返回数字样式。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ParseNumber`1.Value">
+      <summary>获取或设置要分析的值。</summary>
+      <returns>返回要分析的值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.ReplaceString">
+      <summary>用于替换字符串内容的活动（可有选择性地使用正则表达式）。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ReplaceString.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ReplaceString" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ReplaceString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String},System.Activities.InArgument{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ReplaceString" /> 类的新实例。</summary>
+      <param name="input">输入的字符串。</param>
+      <param name="existingValue">要替换的值。</param>
+      <param name="replacement">替换值。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ReplaceString.ExistingValue">
+      <summary>获取或设置要替换的值。</summary>
+      <returns>返回要替换的值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ReplaceString.Input">
+      <summary>获取或设置输入的字符串。</summary>
+      <returns>返回输入的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ReplaceString.Pattern">
+      <summary>获取或设置要使用的正则表达式模式。</summary>
+      <returns>返回要使用的正则表达式模式。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ReplaceString.Replacement">
+      <summary>获取或设置替换值。</summary>
+      <returns>返回替换值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.SplitString">
+      <summary>用于根据分隔符拆分字符串的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.SplitString.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.SplitString" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.SplitString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.SplitString" /> 类的新实例。</summary>
+      <param name="input">输入的字符串。</param>
+      <param name="separator">作为拆分依据的分隔符。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.SplitString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String},System.StringSplitOptions)">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.SplitString" /> 类的新实例。</summary>
+      <param name="input">输入的字符串。</param>
+      <param name="separator">作为拆分依据的分隔符。</param>
+      <param name="stringSplitOptions">拆分选项。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.SplitString.Input">
+      <summary>获取或设置输入的字符串。</summary>
+      <returns>返回输入的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.SplitString.Separator">
+      <summary>获取或设置作为拆分依据的分隔符。</summary>
+      <returns>返回作为拆分依据的分隔符。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.SplitString.StringSplitOptions">
+      <summary>获取或设置拆分选项。</summary>
+      <returns>返回拆分选项。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.StartsWithString">
+      <summary>用于确定字符串是否以特定子字符串开头的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.StartsWithString.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.StartsWithString" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.StartsWithString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.StartsWithString" /> 类的新实例。</summary>
+      <param name="input">输入的字符串。</param>
+      <param name="searchValue">要搜索的值。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.StartsWithString.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String},System.Boolean)">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.StartsWithString" /> 类的新实例。</summary>
+      <param name="input">输入的字符串。</param>
+      <param name="searchValue">目标搜索字符串。</param>
+      <param name="ignoreCase">比较时是否区分大小写。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.StartsWithString.IgnoreCase">
+      <summary>获取或设置是否区分大小写。</summary>
+      <returns>返回是否区分大小写。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.StartsWithString.Input">
+      <summary>获取或设置输入的字符串。</summary>
+      <returns>返回输入的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.StartsWithString.SearchValue">
+      <summary>获取或设置目标搜索字符串。</summary>
+      <returns>返回目标搜索字符串。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.StringLength">
+      <summary>用于返回字符串长度的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.StringLength.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.StringLength" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.StringLength.#ctor(System.Activities.InArgument{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.StringLength" /> 类的新实例。</summary>
+      <param name="input">输入的字符串。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.StringLength.Input">
+      <summary>获取或设置输入的字符串。</summary>
+      <returns>返回输入的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.Substring">
+      <summary>用于返回字符串实例的子字符串的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Substring.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.Substring" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Substring.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.Int32})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.Substring" /> 类的新实例。</summary>
+      <param name="input">输入的字符串。</param>
+      <param name="startIndex">起始索引。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Substring.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.Int32},System.Activities.InArgument{System.Int32})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.Substring" /> 类的新实例。</summary>
+      <param name="input">输入的字符串。</param>
+      <param name="startIndex">起始索引。</param>
+      <param name="length">子字符串的目标长度。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Substring.Input">
+      <summary>获取或设置输入的字符串。</summary>
+      <returns>返回输入的字符串。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Substring.Length">
+      <summary>获取或设置子字符串的目标长度。</summary>
+      <returns>返回子字符串的目标长度。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Substring.StartIndex">
+      <summary>获取或设置起始索引。</summary>
+      <returns>返回起始索引。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.Subtract`1">
+      <summary>用于减去数字的活动。</summary>
+      <typeparam name="T">要减去的对象的类型。</typeparam>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Subtract`1.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.Subtract`1" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Subtract`1.#ctor(System.Activities.InArgument{`0},System.Activities.InArgument{`0})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.Subtract`1" /> 类的新实例。</summary>
+      <param name="left">左值。</param>
+      <param name="right">右值。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Subtract`1.Left">
+      <summary>获取或设置左值。</summary>
+      <returns>返回左值。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Subtract`1.Right">
+      <summary>获取或设置右值。</summary>
+      <returns>返回右值。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.SubtractFromDate">
+      <summary>用于从日期中减去项目的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.SubtractFromDate.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.SubtractFromDate" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.SubtractFromDate.#ctor(System.Activities.InArgument{System.DateTime},System.Activities.InArgument{System.TimeSpan})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.SubtractFromDate" /> 类的新实例。</summary>
+      <param name="input">输入的日期。</param>
+      <param name="timeSpan">要减去的时间。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.SubtractFromDate.Days">
+      <summary>获取或设置要减去的天数。</summary>
+      <returns>返回要减去的天数。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.SubtractFromDate.Hours">
+      <summary>获取或设置要减去的小时数。</summary>
+      <returns>返回要减去的小时数。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.SubtractFromDate.Input">
+      <summary>获取或设置输入的日期。</summary>
+      <returns>返回输入的日期。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.SubtractFromDate.Minutes">
+      <summary>获取或设置要减去的分钟数。</summary>
+      <returns>返回要减去的分钟数。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.SubtractFromDate.Seconds">
+      <summary>获取或设置要减去的天数。</summary>
+      <returns>返回要减去的天数。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.SubtractFromDate.TimeSpan">
+      <summary>获取或设置要减去的完整时间跨度。</summary>
+      <returns>返回要减去的时间跨度。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.ToLowerCase">
+      <summary>用于将字符串转换成小写的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ToLowerCase.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ToLowerCase" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ToLowerCase.#ctor(System.Activities.InArgument{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ToLowerCase" /> 类的新实例。</summary>
+      <param name="input">输入的字符串。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ToLowerCase.Input">
+      <summary>获取或设置输入的字符串。</summary>
+      <returns>返回输入的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.ToString">
+      <summary>用于在对象上调用 ToString 的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ToString.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ToString" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ToString.#ctor(System.Activities.InArgument)">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ToString" /> 类的新实例。</summary>
+      <param name="targetObject">目标对象。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ToString.#ctor(System.Activities.InArgument,System.Activities.InArgument{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ToString" /> 类的新实例。</summary>
+      <param name="targetObject">目标对象。</param>
+      <param name="format">格式。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ToString.#ctor(System.Activities.InArgument,System.Activities.InArgument{System.String},System.Activities.InArgument{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ToString" /> 类的新实例。</summary>
+      <param name="targetObject">目标对象。</param>
+      <param name="format">格式。</param>
+      <param name="cultureName">区域性。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ToString.CultureName">
+      <summary>获取或设置要使用的区域性。</summary>
+      <returns>返回要使用的区域性。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ToString.Format">
+      <summary>获取或设置要使用的格式。</summary>
+      <returns>返回要使用的格式。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ToString.Object">
+      <summary>获取或设置目标对象。</summary>
+      <returns>返回目标对象。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.ToUpperCase">
+      <summary>用于将字符串转换成大写的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ToUpperCase.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ToUpperCase" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.ToUpperCase.#ctor(System.Activities.InArgument{System.String})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Expressions.ToUpperCase" /> 类的新实例。</summary>
+      <param name="input">输入的字符串。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.ToUpperCase.Input">
+      <summary>获取或设置输入的字符串。</summary>
+      <returns>返回输入的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Expressions.Trim">
+      <summary>代表用于修整字符串的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Trim.#ctor">
+      <summary>使用默认值初始化 <see cref="T:Microsoft.Activities.Expressions.Trim" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Trim.#ctor(System.Activities.InArgument{System.String})">
+      <summary>使用输入字符串初始化 <see cref="T:Microsoft.Activities.Expressions.Trim" /> 类的新实例。</summary>
+      <param name="input">输入的字符串。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Expressions.Trim.#ctor(System.Activities.InArgument{System.String},System.Activities.InArgument{System.String})">
+      <summary>使用输入字符串和修整的字符初始化 <see cref="T:Microsoft.Activities.Expressions.Trim" /> 类的新实例。</summary>
+      <param name="input">输入的字符串。</param>
+      <param name="characters">修整的字符。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Trim.Characters">
+      <summary>获取或设置要修整的字符。</summary>
+      <returns>要修整的字符。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Expressions.Trim.Input">
+      <summary>获取或设置输入的字符串。</summary>
+      <returns>输入的字符串。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.BuildMatchAllFilter">
+      <summary>用于构建全部匹配订阅筛选器的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.BuildMatchAllFilter.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Messaging.BuildMatchAllFilter" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.BuildMatchAllFilter.Matches">
+      <summary>获取要在通知消息中匹配的名称和值的集。</summary>
+      <returns>返回配置的匹配项集。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.GetS2SSecurityToken">
+      <summary>用于根据范围安全设置创建 OAuth2 S2S 安全令牌的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.GetS2SSecurityToken.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Messaging.GetS2SSecurityToken" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.GetS2SSecurityToken.IsAppOnlySecurity">
+      <summary>获取或设置是否仅使用工作流应用程序标识。</summary>
+      <returns>返回配置的仅限应用程序的设置。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.HttpDelete">
+      <summary>用于发送 HTTP DELETE 请求及接收 HTTP 响应的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.HttpDelete.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Messaging.HttpDelete" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpDelete.HttpErrorHandler">
+      <summary>获取或设置一个活动委派，用于处理错误响应及尝试重试。</summary>
+      <returns>返回配置的错误处理程序。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpDelete.RequestHeaders">
+      <summary>获取或设置请求消息的标头。</summary>
+      <returns>返回请求消息的标头。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpDelete.ResponseContent">
+      <summary>获取或设置响应消息的内容。</summary>
+      <returns>返回响应消息的内容。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpDelete.ResponseHeaders">
+      <summary>获取或设置响应消息的标头。</summary>
+      <returns>返回响应消息的标头。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpDelete.ResponseStatusCode">
+      <summary>获取或设置响应消息的状态代码。</summary>
+      <returns>返回响应消息的状态代码。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpDelete.RetryOnConnectionFailure">
+      <summary>获取或设置在连接失败时是否要重试。</summary>
+      <returns>返回在连接失败时是否要重试。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpDelete.SecurityToken">
+      <summary>获取或设置安全令牌。</summary>
+      <returns>返回配置的安全令牌。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpDelete.Uri">
+      <summary>获取或设置目标 URI。</summary>
+      <returns>返回配置的 URI。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.HttpGet">
+      <summary>用于发送 HTTP GET 请求及接收 HTTP 响应的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.HttpGet.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Messaging.HttpGet" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpGet.HttpErrorHandler">
+      <summary>获取或设置一个活动委派，用于处理错误响应及尝试重试。</summary>
+      <returns>返回配置的错误处理程序。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpGet.RequestHeaders">
+      <summary>获取或设置请求消息的标头。</summary>
+      <returns>返回请求消息的标头。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpGet.ResponseContent">
+      <summary>获取或设置响应消息的内容。</summary>
+      <returns>返回响应消息的内容。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpGet.ResponseHeaders">
+      <summary>获取或设置响应消息的标头。</summary>
+      <returns>返回响应消息的标头。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpGet.ResponseStatusCode">
+      <summary>获取或设置响应消息的状态代码。</summary>
+      <returns>返回响应消息的状态代码。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpGet.RetryOnConnectionFailure">
+      <summary>获取或设置在连接失败时是否要重试。</summary>
+      <returns>返回在连接失败时是否要重试。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpGet.SecurityToken">
+      <summary>获取或设置安全令牌。</summary>
+      <returns>返回配置的安全令牌。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpGet.Uri">
+      <summary>获取或设置目标 URI。</summary>
+      <returns>返回配置的 URI。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.HttpMerge">
+      <summary>用于发送 HTTP MERGE 请求及接收 HTTP 响应的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.HttpMerge.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Messaging.HttpMerge" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpMerge.Etag">
+      <summary>获取或设置用于确定合并的 Etag。</summary>
+      <returns>返回配置的 Etag。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpMerge.HttpErrorHandler">
+      <summary>获取或设置一个活动委派，用于处理错误响应及尝试重试。</summary>
+      <returns>返回配置的错误处理程序。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpMerge.RequestContent">
+      <summary>获取或设置请求消息的内容。</summary>
+      <returns>返回请求消息的内容。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpMerge.ResponseContent">
+      <summary>获取或设置响应消息的内容。</summary>
+      <returns>返回响应消息的内容。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpMerge.ResponseHeaders">
+      <summary>获取或设置响应消息的标头。</summary>
+      <returns>返回响应消息的标头。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpMerge.ResponseStatusCode">
+      <summary>获取或设置响应消息的状态代码。</summary>
+      <returns>返回响应消息的状态代码。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpMerge.RetryOnConnectionFailure">
+      <summary>获取或设置在连接失败时是否要重试。</summary>
+      <returns>返回在连接失败时是否要重试。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpMerge.Uri">
+      <summary>获取或设置目标 URI。</summary>
+      <returns>返回配置的 URI。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.HttpPost">
+      <summary>用于发送 HTTP POST 请求及接收 HTTP 响应的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.HttpPost.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Messaging.HttpPost" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPost.HttpErrorHandler">
+      <summary>获取或设置一个活动委派，用于处理错误响应及尝试重试。</summary>
+      <returns>返回配置的错误处理程序。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPost.RequestContent">
+      <summary>获取或设置请求消息的内容。</summary>
+      <returns>返回请求消息的内容。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPost.RequestHeaders">
+      <summary>获取或设置请求消息的标头。</summary>
+      <returns>返回请求消息的标头。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPost.ResponseContent">
+      <summary>获取或设置响应消息的内容。</summary>
+      <returns>返回响应消息的内容。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPost.ResponseHeaders">
+      <summary>获取或设置响应消息的标头。</summary>
+      <returns>返回响应消息的标头。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPost.ResponseStatusCode">
+      <summary>获取或设置响应消息的状态代码。</summary>
+      <returns>返回响应消息的状态代码。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPost.RetryOnConnectionFailure">
+      <summary>获取或设置在连接失败时是否要重试。</summary>
+      <returns>返回在连接失败时是否要重试。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPost.SecurityToken">
+      <summary>获取或设置安全令牌。</summary>
+      <returns>返回配置的安全令牌。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPost.Uri">
+      <summary>获取或设置目标 URI。</summary>
+      <returns>返回配置的 URI。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.HttpPut">
+      <summary>用于发送 HTTP PUT 请求及接收 HTTP 响应的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.HttpPut.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Messaging.HttpPut" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPut.HttpErrorHandler">
+      <summary>获取或设置一个活动委派，用于处理错误响应及尝试重试。</summary>
+      <returns>返回配置的错误处理程序。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPut.RequestContent">
+      <summary>获取或设置请求消息的内容。</summary>
+      <returns>返回请求消息的内容。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPut.RequestHeaders">
+      <summary>获取或设置请求消息的标头。</summary>
+      <returns>返回请求消息的标头。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPut.ResponseContent">
+      <summary>获取或设置响应消息的内容。</summary>
+      <returns>返回响应消息的内容。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPut.ResponseHeaders">
+      <summary>获取或设置响应消息的标头。</summary>
+      <returns>返回响应消息的标头。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPut.ResponseStatusCode">
+      <summary>获取或设置响应消息的状态代码。</summary>
+      <returns>返回响应消息的状态代码。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPut.RetryOnConnectionFailure">
+      <summary>获取或设置在连接失败时是否要重试。</summary>
+      <returns>返回在连接失败时是否要重试。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPut.SecurityToken">
+      <summary>获取或设置安全令牌。</summary>
+      <returns>返回配置的安全令牌。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.HttpPut.Uri">
+      <summary>获取或设置目标 URI。</summary>
+      <returns>返回配置的 URI。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.MatchAllSubscriptionFilter">
+      <summary>指定一个订阅筛选器，用于完全匹配一组消息属性。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.MatchAllSubscriptionFilter.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Messaging.MatchAllSubscriptionFilter" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.MatchAllSubscriptionFilter.Matches">
+      <summary>获取必须完全匹配的属性名称和值的集。</summary>
+      <returns>返回订阅筛选器中的属性名称和值的集。</returns>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.MatchAllSubscriptionFilter.Validate(System.Boolean)">
+      <summary>验证订阅筛选器。</summary>
+      <returns>返回验证成功或失败的结果。</returns>
+      <param name="throwExceptionOnFailure">是否在验证失败时引发异常。</param>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.MatchAnySubscriptionFilter">
+      <summary>通过一组订阅筛选器指定 OR 条件。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.MatchAnySubscriptionFilter.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Messaging.MatchAnySubscriptionFilter" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.MatchAnySubscriptionFilter.Filters">
+      <summary>获取订阅筛选器集。</summary>
+      <returns>返回订阅筛选器集。</returns>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.MatchAnySubscriptionFilter.Validate(System.Boolean)">
+      <summary>验证订阅筛选器。</summary>
+      <returns>返回验证成功或失败的结果。</returns>
+      <param name="throwExceptionOnFailure">是否在验证失败时引发异常。</param>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.ReceiveNotification">
+      <summary>用于接收通知消息的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.ReceiveNotification.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Messaging.ReceiveNotification" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.ReceiveNotification.#ctor(System.Activities.InArgument{Microsoft.Activities.Messaging.SubscriptionFilter})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Messaging.ReceiveNotification" /> 类的新实例。</summary>
+      <param name="filter">要添加到订阅中的筛选器。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.ReceiveNotification.#ctor(System.Activities.InArgument{Microsoft.Activities.Messaging.SubscriptionHandle})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Messaging.ReceiveNotification" /> 类的新实例。</summary>
+      <param name="subscriptionHandle">创建的订阅规则的句柄。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.ReceiveNotification.Content">
+      <summary>获取或设置通知消息的内容。</summary>
+      <returns>返回通知消息的内容。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.ReceiveNotification.Filter">
+      <summary>获取或设置要添加到订阅中的筛选器。</summary>
+      <returns>返回要添加到订阅中的筛选器。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.ReceiveNotification.Properties">
+      <summary>获取通知消息的消息属性。</summary>
+      <returns>返回通知消息的消息属性。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.ReceiveNotification.SubscriptionHandle">
+      <summary>获取或设置创建的订阅规则的句柄。</summary>
+      <returns>返回创建的订阅规则的句柄。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.SecurityToken">
+      <summary>代表安全令牌的基类。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.SecurityToken.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Messaging.SecurityToken" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.SecurityToken.WriteTo(System.Net.Http.HttpRequestMessage)">
+      <summary>运行时调用，用于在请求消息中写入安全令牌。</summary>
+      <param name="request">要在其中添加安全令牌的请求消息。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.SecurityToken.WriteTo(System.ServiceModel.ChannelFactory)">
+      <summary>运行时调用，用于在请求消息中写入安全令牌。</summary>
+      <param name="factory">要在其中添加安全令牌的工厂。</param>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.SecurityTokenScope">
+      <summary>代表用于通过一组活动指定安全令牌的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.SecurityTokenScope.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Messaging.SecurityTokenScope" /> 类的新实例。</summary>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.SecurityTokenScope.Body">
+      <summary>获取或设置范围中的活动。</summary>
+      <returns>范围中的活动。</returns>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.SecurityTokenScope.CacheMetadata(System.Activities.NativeActivityMetadata)">
+      <summary>构建并验证活动参数、变量、子活动和活动委派的描述。</summary>
+      <param name="metadata">活动元数据，用于封装活动参数、变量、子活动和活动委派。</param>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.SecurityTokenScope.Execute(System.Activities.NativeActivityContext)">
+      <summary>由工作流运行时调用，用于执行 <see cref="T:Microsoft.Activities.Messaging.SecurityTokenScope" /> 活动。</summary>
+      <param name="context">本机活动上下文。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.SecurityTokenScope.SecurityToken">
+      <summary>获取或设置要在范围中应用的安全令牌。</summary>
+      <returns>范围的安全令牌。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.Subscribe">
+      <summary>用于使工作流根据指定的筛选器订阅通知的活动。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.Subscribe.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Messaging.Subscribe" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.Subscribe.#ctor(System.Activities.InArgument{Microsoft.Activities.Messaging.SubscriptionFilter},System.Activities.InArgument{Microsoft.Activities.Messaging.SubscriptionHandle})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Messaging.Subscribe" /> 类的新实例。</summary>
+      <param name="filter">要添加到订阅中的筛选器。</param>
+      <param name="subscriptionHandle">创建的订阅规则的句柄。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.Subscribe.Filter">
+      <summary>获取或设置要添加到订阅中的筛选器。</summary>
+      <returns>返回要添加到订阅中的筛选器。</returns>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.Subscribe.SubscriptionHandle">
+      <summary>获取或设置创建的订阅规则的句柄。</summary>
+      <returns>返回创建的订阅规则的句柄。</returns>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.SubscriptionFilter">
+      <summary>代表订阅筛选器的基类。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.SubscriptionFilter.Validate(System.Boolean)">
+      <summary>验证订阅筛选器。</summary>
+      <returns>返回验证成功或失败的结果。</returns>
+      <param name="throwExceptionOnFailure">是否在验证失败时引发异常。</param>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.SubscriptionHandle">
+      <summary>用于存储 Subscribe 或 ReceiveNotification 活动创建的订阅的句柄。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.SubscriptionHandle.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Messaging.SubscriptionHandle" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.SubscriptionHandle.OnUninitialize(System.Activities.HandleInitializationContext)">
+      <summary>在订阅句柄超出范围时调用，以便清理订阅。</summary>
+      <param name="context">句柄的运行时上下文。</param>
+    </member>
+    <member name="T:Microsoft.Activities.Messaging.Unsubscribe">
+      <summary>此活动用于取消订阅，不再接收订阅句柄指定的筛选器上的通知。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.Unsubscribe.#ctor">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Messaging.Unsubscribe" /> 类的新实例。</summary>
+    </member>
+    <member name="M:Microsoft.Activities.Messaging.Unsubscribe.#ctor(System.Activities.InArgument{Microsoft.Activities.Messaging.SubscriptionHandle})">
+      <summary>初始化 <see cref="T:Microsoft.Activities.Messaging.Unsubscribe" /> 类的新实例。</summary>
+      <param name="subscriptionHandle">从 Subscribe 或 ReceiveNotification 活动创建的订阅的句柄。</param>
+    </member>
+    <member name="P:Microsoft.Activities.Messaging.Unsubscribe.SubscriptionHandle">
+      <summary>获取或设置从 Subscribe 或 ReceiveNotification 活动创建的订阅的句柄。</summary>
+      <returns>返回订阅句柄。</returns>
+    </member>
+  </members>
+</doc>

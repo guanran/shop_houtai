@@ -155,6 +155,7 @@
     <Compile Include="common\goodsList.cs" />
     <Compile Include="common\JsonExtensions.cs" />
     <Compile Include="common\ResponseModel.cs" />
+    <Compile Include="JsonModel\IndexList.cs" />
     <Compile Include="shop\t_goods.cs" />
     <Compile Include="shop\t_index_banner.cs" />
     <Compile Include="shop\t_unit.cs" />

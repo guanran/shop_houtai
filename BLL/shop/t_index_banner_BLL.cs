@@ -3,6 +3,7 @@ using System.Data;
 using System.Collections.Generic;
 using Entity;
 using DAO;
+using Entity.common;
 
 namespace BLL
 {
@@ -87,7 +88,7 @@ namespace BLL
 		/// </summary>
 		public List<t_index_banner> GetModelList(string strWhere)
 		{
-			DataSet ds = dal.GetList(strWhere);
+            DataSet ds = dal.GetList(strWhere);
 			return DataTableToList(ds.Tables[0]);
 		}
 		/// <summary>
