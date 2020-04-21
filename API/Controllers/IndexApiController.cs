@@ -2,6 +2,7 @@
 using DAO;
 using Entity;
 using Entity.common;
+using Entity.JsonModel;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -13,18 +14,27 @@ namespace API.Controllers
 {
     public class IndexApiController : Controller
     {
-        public t_index_banner_BLL bll = new t_index_banner_BLL();
-        //获取轮播图
+        public t_index_banner_BLL banner_bll = new t_index_banner_BLL();
+
+        public t_index_announce_BLL announce_bll = new t_index_announce_BLL();
 
         [HttpGet]
         public JsonResult IndexList()
         {
-            CommonAjaxResponseModel<List<t_index_banner>> vmResult = new CommonAjaxResponseModel<List<t_index_banner>>();
+            CommonAjaxResponseModel<IndexList> vmResult = new CommonAjaxResponseModel<IndexList>();
+
+            IndexList model = new IndexList();
             try
             {
-                List<t_index_banner> result = bll.GetModelList("");
+                //获取轮播图
+                List<t_index_banner> banner_list = banner_bll.GetModelList("");
+                //获取通知列表
+                List<t_index_announce> announce_list = announce_bll.GetModelList("");
+
+                model.bannerList = banner_list;
+                model.announceList = announce_list;
                 vmResult.BFlag = CommonResponseBFlag.Success;
-                vmResult.TData = result;
+                vmResult.TData = model;
             }
             catch (Exception e)
             {
@@ -34,7 +44,7 @@ namespace API.Controllers
             return Json(vmResult, JsonRequestBehavior.AllowGet);
         }
 
-
+        
 
         [HttpGet]
         public JsonResult carouselList()
@@ -42,7 +52,7 @@ namespace API.Controllers
             CommonAjaxResponseModel<List<t_index_banner>> vmResult = new CommonAjaxResponseModel<List<t_index_banner>>();
             try
             {
-                List<t_index_banner> result = bll.GetModelList("");
+                List<t_index_banner> result = banner_bll.GetModelList("");
                 vmResult.BFlag = CommonResponseBFlag.Success;
                 vmResult.TData = result;
             }

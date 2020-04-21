@@ -18,5 +18,10 @@ namespace Entity.JsonModel
 
         //猜你喜欢
         public List<t_goods> guessYouLikeProductList { get; set; }
+
+        public List<t_index_banner> bannerList { get; set; }
+
+        public List<t_index_announce> announceList { get; set; }
+
     }
 }

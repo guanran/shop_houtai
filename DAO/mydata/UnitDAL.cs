@@ -103,7 +103,7 @@ on x1.id=x2.unit_id where x1.status_code!=-1 {0} order by x1.id limit @begin,@pa
         {
             string sql = @"
 
-INSERT INTO `mydata`.`t_unit` (`code`, `unit_kind`, `unit_name`, `count`, `price`, `total_price`, `begin_time`, `end_time`, `status_code`,create_time) 
+INSERT INTO `t_unit` (`code`, `unit_kind`, `unit_name`, `count`, `price`, `total_price`, `begin_time`, `end_time`, `status_code`,create_time) 
 select @code, @unit_kind,@unit_name,@count,@price,@total_price,@begin_time,@end_time,1,now()";
 
             using (MySqlConnection sql_conn = new MySqlConnection(mysqlCon))
@@ -128,7 +128,7 @@ select @code, @unit_kind,@unit_name,@count,@price,@total_price,@begin_time,@end_
         public static int Update(t_unit model)
         {
             string sql = @"
-UPDATE `mydata`.`t_unit` SET `code`=@code, `unit_kind`=@unit_kind, `unit_name`=@unit_name, `count`=@count, `price`=@price, `total_price`=@total_price, `begin_time`=@begin_time, `end_time`=@end_time, `update_time`=now() WHERE `id`=@id;";
+UPDATE `t_unit` SET `code`=@code, `unit_kind`=@unit_kind, `unit_name`=@unit_name, `count`=@count, `price`=@price, `total_price`=@total_price, `begin_time`=@begin_time, `end_time`=@end_time, `update_time`=now() WHERE `id`=@id;";
 
             using (MySqlConnection sql_conn = new MySqlConnection(mysqlCon))
             {
@@ -249,7 +249,7 @@ where x1.status_code!=-1 {0} ;
         public static int UpdateUnitGoods(t_unit_goods model)
         {
             string sql = @"
-UPDATE `mydata`.`t_unit_goods` SET  `goods_id`=@goods_id,`goods_name`=@goods_name, `goods_name_new`=@goods_name_new, `count`=@count, `price`=@price, `sell_min_price`=@sell_min_price, `sell_max_price`=@sell_max_price, `update_time`=now()  WHERE `id`=@id;";
+UPDATE `t_unit_goods` SET  `goods_id`=@goods_id,`goods_name`=@goods_name, `goods_name_new`=@goods_name_new, `count`=@count, `price`=@price, `sell_min_price`=@sell_min_price, `sell_max_price`=@sell_max_price, `update_time`=now()  WHERE `id`=@id;";
 
             using (MySqlConnection sql_conn = new MySqlConnection(mysqlCon))
             {
@@ -274,7 +274,7 @@ UPDATE `mydata`.`t_unit_goods` SET  `goods_id`=@goods_id,`goods_name`=@goods_nam
         public static int AddUnitGoods(t_unit_goods model)
         {
             string sql = @"
-INSERT INTO `mydata`.`t_unit_goods` (`unit_id`, `goods_id`,`goods_name`, `goods_name_new`, `count`, `price`, `sell_min_price`, `sell_max_price`, `create_time`,`status_code`) 
+INSERT INTO `t_unit_goods` (`unit_id`, `goods_id`,`goods_name`, `goods_name_new`, `count`, `price`, `sell_min_price`, `sell_max_price`, `create_time`,`status_code`) 
  select @unit_id, @goods_id,@goods_name,@goods_name_new, @count, @price, @sell_min_price, @sell_max_price, now(), 1;";
 
             using (MySqlConnection sql_conn = new MySqlConnection(mysqlCon))
@@ -350,7 +350,7 @@ INSERT INTO `mydata`.`t_unit_goods` (`unit_id`, `goods_id`,`goods_name`, `goods_
         public static int CopyUnit(t_unit model)
         {
             int unit_id = 0;
-            string sql = @"INSERT INTO `mydata`.`t_unit` (`code`, `unit_kind`, `unit_name`, `count`, `price`, `total_price`, `begin_time`, `end_time`, `status_code`, `create_time`) 
+            string sql = @"INSERT INTO `t_unit` (`code`, `unit_kind`, `unit_name`, `count`, `price`, `total_price`, `begin_time`, `end_time`, `status_code`, `create_time`) 
 select @code, @unit_kind, @unit_name, count, price, total_price,begin_time,end_time, status_code,now() from t_unit where id=@id;
  ";
             using (MySqlConnection sql_conn = new MySqlConnection(mysqlCon))
@@ -390,7 +390,7 @@ select @code, @unit_kind, @unit_name, count, price, total_price,begin_time,end_t
 
         public static int CopyUnitGoods(int old_unit_id,int new_unit_id)
         {
-            string sql = @"INSERT INTO `mydata`.`t_unit_goods` (`unit_id`, `goods_id`, `goods_name`, `goods_name_new`, `count`, `price`, `sell_min_price`, `sell_max_price`, `create_time`,  `status_code`) 
+            string sql = @"INSERT INTO `t_unit_goods` (`unit_id`, `goods_id`, `goods_name`, `goods_name_new`, `count`, `price`, `sell_min_price`, `sell_max_price`, `create_time`,  `status_code`) 
 select  @new_unit_id as unit_id, goods_id, goods_name,goods_name_new,count, price, sell_min_price,sell_max_price,now() as create_time, 1 as status_code  from t_unit_goods where status_code=1 and  unit_id=@old_unit_id ;
 ";
             using (MySqlConnection sql_conn = new MySqlConnection(mysqlCon))

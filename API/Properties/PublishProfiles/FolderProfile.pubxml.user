@@ -6,7 +6,7 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>H:\001uniapp\发布</_PublishTargetUrl>
+    <_PublishTargetUrl>E:\uniapp\fabu\api</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="Areas/HelpPage/HelpPage.css">
@@ -79,37 +79,37 @@
       <publishTime>04/17/2020 10:53:09</publishTime>
     </File>
     <File Include="bin/API.dll">
-      <publishTime>04/17/2020 15:33:27</publishTime>
+      <publishTime>04/19/2020 00:57:03</publishTime>
     </File>
     <File Include="bin/API.pdb">
-      <publishTime>04/17/2020 15:33:27</publishTime>
+      <publishTime>04/19/2020 00:57:03</publishTime>
     </File>
     <File Include="bin/BLL.dll">
-      <publishTime>04/17/2020 15:22:33</publishTime>
+      <publishTime>04/19/2020 00:57:02</publishTime>
     </File>
     <File Include="bin/BLL.dll.config">
       <publishTime>04/17/2020 10:53:07</publishTime>
     </File>
     <File Include="bin/BLL.pdb">
-      <publishTime>04/17/2020 15:22:33</publishTime>
+      <publishTime>04/19/2020 00:57:02</publishTime>
     </File>
     <File Include="bin/DAO.dll">
-      <publishTime>04/17/2020 15:22:33</publishTime>
+      <publishTime>04/19/2020 00:57:02</publishTime>
     </File>
     <File Include="bin/DAO.dll.config">
       <publishTime>04/17/2020 10:53:07</publishTime>
     </File>
     <File Include="bin/DAO.pdb">
-      <publishTime>04/17/2020 15:22:33</publishTime>
+      <publishTime>04/19/2020 00:57:02</publishTime>
     </File>
     <File Include="bin/Entity.dll">
-      <publishTime>04/17/2020 15:22:33</publishTime>
+      <publishTime>04/19/2020 00:57:01</publishTime>
     </File>
     <File Include="bin/Entity.dll.config">
       <publishTime>04/17/2020 10:53:08</publishTime>
     </File>
     <File Include="bin/Entity.pdb">
-      <publishTime>04/17/2020 15:22:33</publishTime>
+      <publishTime>04/19/2020 00:57:01</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>04/17/2020 10:53:09</publishTime>
@@ -418,7 +418,7 @@
       <publishTime>04/17/2020 10:53:07</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/17/2020 14:02:38</publishTime>
+      <publishTime>04/18/2020 23:27:08</publishTime>
     </File>
   </ItemGroup>
 </Project>

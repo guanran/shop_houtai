@@ -67,7 +67,7 @@ namespace DAO.mydata
         public static int AddGoods(t_goods model)
         {
             string sql = @"
-INSERT INTO `mydata`.`t_goods` ( `topType`, `type`, `goodsName`, `minPrice`, `maxPrice`, `sell_min_price`, `sell_max_price`,`describe`, `status`, `createTime`, `url`) select @topType, @type,@goodsName,@minPrice,@maxPrice,@sell_min_price,@sell_max_price,@describe,1,now(),@url";
+INSERT INTO `t_goods` ( `topType`, `type`, `goodsName`, `minPrice`, `maxPrice`, `sell_min_price`, `sell_max_price`,`describe`, `status`, `createTime`, `url`) select @topType, @type,@goodsName,@minPrice,@maxPrice,@sell_min_price,@sell_max_price,@describe,1,now(),@url";
 
             using (MySqlConnection sql_conn = new MySqlConnection(mysqlCon))
             {
@@ -93,7 +93,7 @@ INSERT INTO `mydata`.`t_goods` ( `topType`, `type`, `goodsName`, `minPrice`, `ma
         public static int UpdateGoods(t_goods model)
         {
             string sql = @"
-UPDATE `mydata`.`t_goods` SET  `topType`=@topType, `type`=@type, `goodsName`=@goodsName, `minPrice`=@minPrice, `maxPrice`=@maxPrice, `sell_min_price`=@sell_min_price, `sell_max_price`=@sell_max_price, `describe`=@describe, `updateTime`=now(), `url`=@url WHERE `id`=@id;";
+UPDATE `t_goods` SET  `topType`=@topType, `type`=@type, `goodsName`=@goodsName, `minPrice`=@minPrice, `maxPrice`=@maxPrice, `sell_min_price`=@sell_min_price, `sell_max_price`=@sell_max_price, `describe`=@describe, `updateTime`=now(), `url`=@url WHERE `id`=@id;";
 
             using (MySqlConnection sql_conn = new MySqlConnection(mysqlCon))
             {

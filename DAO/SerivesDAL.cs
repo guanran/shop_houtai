@@ -18,7 +18,7 @@ namespace DAO
 
             int xx = 0;
             string sql = @"
-INSERT INTO `mydata`.`t_unit_goods_list` (`unit_id`, `goods_id`, `goods_name_new`,number, `guid`, `random_num`, `ping_string`, `MD5_1`, `MD5_2`, `MD5_3`, `MD5_4`,`MD5_5`,`goods_number`, `create_time`,`status_code`) 
+INSERT INTO `t_unit_goods_list` (`unit_id`, `goods_id`, `goods_name_new`,number, `guid`, `random_num`, `ping_string`, `MD5_1`, `MD5_2`, `MD5_3`, `MD5_4`,`MD5_5`,`goods_number`, `create_time`,`status_code`) 
 
 
 select @unit_id, @goods_id, @goods_name_new,@number,  @guid, @random_num, @ping_string, @MD5_1, @MD5_2, @MD5_3,@MD5_4,@MD5_5, @goods_number, now(), 1;";

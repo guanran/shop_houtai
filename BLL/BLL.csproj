@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B9E254AC-D38A-4B91-968E-454B279F7003}</ProjectGuid>
+    <ProjectGuid>{B95771CF-71A3-4529-897A-8C898FB25B73}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BLL</RootNamespace>
@@ -43,7 +43,13 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="shop\t_goods.cs" />
+    <Compile Include="shop\t_index_announce.cs" />
     <Compile Include="shop\t_index_banner_BLL.cs" />
+    <Compile Include="shop\t_procurement_records.cs" />
+    <Compile Include="shop\t_unit.cs" />
+    <Compile Include="shop\t_unit_goods.cs" />
+    <Compile Include="shop\t_unit_goods_list.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAO\DAO.csproj">

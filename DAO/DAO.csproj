@@ -111,7 +111,13 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SerivesDAL.cs" />
+    <Compile Include="shop\t_goods.cs" />
+    <Compile Include="shop\t_index_announce.cs" />
     <Compile Include="shop\t_index_banner_DAL.cs" />
+    <Compile Include="shop\t_procurement_records.cs" />
+    <Compile Include="shop\t_unit.cs" />
+    <Compile Include="shop\t_unit_goods.cs" />
+    <Compile Include="shop\t_unit_goods_list.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

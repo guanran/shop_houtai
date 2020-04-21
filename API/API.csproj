@@ -252,7 +252,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
-      <Project>{b9e254ac-d38a-4b91-968e-454b279f7003}</Project>
+      <Project>{b95771cf-71a3-4529-897a-8c898fb25b73}</Project>
       <Name>BLL</Name>
     </ProjectReference>
     <ProjectReference Include="..\DAO\DAO.csproj">

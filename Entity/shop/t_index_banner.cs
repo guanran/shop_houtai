@@ -7,7 +7,7 @@ namespace Entity
     /// <summary>
     /// t_index_banner:实体类(属性说明自动提取数据库字段的描述信息)
     /// </summary>
-    [Table("t_goods")]
+    [Table("t_index_banner")]
     public partial class t_index_banner
 	{
 		public t_index_banner()

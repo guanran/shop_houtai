@@ -44,6 +44,8 @@ namespace Entity
         public DateTime? create_time { get; set; }
         public DateTime? update_time { get; set; }
 
+        public DateTime? sell_time { get; set; }
+
         [NotMapped]
         public string code { get; set; }
         [NotMapped]
